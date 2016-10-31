@@ -17,16 +17,16 @@ namespace ECS {
         Entity ReplaceComponent(Component component, bool notifySystems);
         void RemoveAllComponents();
         
-        template<typename T> void RemoveComponent(T);
-        template<typename T> T GetComponent(T);
-        template<typename T> std::list<T> GetComponents(T);
-        template<typename T> bool HasComponent(T);
+        template<typename T> void RemoveComponent(T type);
+        template<typename T> T GetComponent(T type);
+        template<typename T> std::list<T> GetComponents(T type);
+        template<typename T> bool HasComponent(T type);
         //        bool HasAnyComponent(Matchers matchers[]);
         //        bool HasAllComponents(Matchers matchers[]);
         //        bool HasNoneComponents(Matchers matchers[]);
         //        bool DoesMatchFilter(Filter request);
         
-        std::list<Component> Components();
+        std::list<Component> GetComponents();
         
         private :
         std::list<Component> components;
