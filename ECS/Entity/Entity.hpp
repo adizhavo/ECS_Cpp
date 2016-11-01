@@ -1,10 +1,7 @@
 #ifndef Entity_hpp
 #define Entity_hpp
 
-#include <stdio.h>
-#include <algorithm>
-#include <list>
-
+#include <vector>
 #include "Component.hpp"
 
 namespace ECS {
@@ -14,22 +11,21 @@ namespace ECS {
         ~Entity();
         
         Entity AddComponent(Component component, bool notifySystems);
-        Entity ReplaceComponent(Component component, bool notifySystems);
         void RemoveAllComponents();
         
-        template<typename T> void RemoveComponent(T type);
-        template<typename T> T GetComponent(T type);
-        template<typename T> std::list<T> GetComponents(T type);
-        template<typename T> bool HasComponent(T type);
+        template<typename T> void RemoveComponent();
+        template<typename T> T GetComponent();
+        template<typename T> std::vector<T> GetComponents();
+        template<typename T> bool HasComponent();
         //        bool HasAnyComponent(Matchers matchers[]);
         //        bool HasAllComponents(Matchers matchers[]);
         //        bool HasNoneComponents(Matchers matchers[]);
         //        bool DoesMatchFilter(Filter request);
         
-        std::list<Component> GetComponents();
+        std::vector<Component> GetComponents();
         
         private :
-        std::list<Component> components;
+        std::vector<Component> components;
     };
 }
 

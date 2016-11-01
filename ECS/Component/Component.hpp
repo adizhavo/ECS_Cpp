@@ -2,8 +2,11 @@
 #define Component_hpp
 
 namespace ECS {
+    class Entity;
+    
     class Component {
-//        public :
+        public :
+        Entity *entity;
 //        Matcher matcher;
     };
 }
