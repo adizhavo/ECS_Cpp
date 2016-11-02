@@ -1,12 +1,13 @@
 #include "Entity.hpp"
+#include "EntityMatcher.hpp"
 
 namespace ECS {
     Entity::Entity() {
-        // TODO : subscibe to the matcher
+        EntityMatcher::Subscribe(this);
     }
     
     Entity::~Entity() {
-        // TODO : unsubscribe to the matcher
+        EntityMatcher::UnSubscribe(this);
         RemoveAllComponents();
     }
     
