@@ -6,9 +6,10 @@ namespace ECS {
     
     class Component {
         public :
+        Component();
         Entity *entity;
 //        Matcher matcher;
     };
 }
 
-#endif /* Component_hpp */
+#endif
