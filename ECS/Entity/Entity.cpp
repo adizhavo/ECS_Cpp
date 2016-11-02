@@ -12,11 +12,13 @@ namespace ECS {
     }
     
     Entity Entity::AddComponent(Component* component, bool notifySystems) {
-        this->components.push_back(component);
-        component->entity = this;
-        
-        if (notifySystems) {
-            // TODO : notify systems
+        if (!this->HasComponent<typeof(*component)>()) {
+            this->components.push_back(component);
+            component->entity = this;
+            
+            if (notifySystems) {
+                // TODO : notify systems
+            }
         }
         return *this;
     }
