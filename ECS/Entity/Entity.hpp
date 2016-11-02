@@ -13,7 +13,7 @@ namespace ECS {
         Entity();
         ~Entity();
         
-        Entity AddComponent(Component* component, bool notifySystems);
+        Entity AddComponent(Component* component, bool notifySystems = true);
         void RemoveAllComponents();
         std::vector<Component*> GetComponents();
         
