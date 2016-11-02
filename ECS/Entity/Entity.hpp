@@ -18,15 +18,11 @@ namespace ECS {
         std::vector<Component*> GetComponents();
         
         template<typename T> void RemoveComponent() {
-            int erase_index = -1;
             for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T comp = dynamic_cast<T>(this->components.at(cmp_index));
+                T* comp = static_cast<T*>(this->components.at(cmp_index));
                 if (comp != NULL)
-                    erase_index = cmp_index;
+                    this->components.erase(std::remove(this->components.begin(), this->components.end(), comp), this->components.end());
             }
-            
-            if (erase_index > 0)
-                this->components.erase(this->components.begin() + erase_index);
         }
         
         template<typename T> T* GetComponent() {
