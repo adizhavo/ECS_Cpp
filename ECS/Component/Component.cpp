@@ -1,9 +1,7 @@
-//
-//  Component.cpp
-//  ECS
-//
-//  Created by Adi Zhavo on 02/11/16.
-//  Copyright © 2016 Adi Zhavo. All rights reserved.
-//
+#include "Component.hpp"
 
-#include <stdio.h>
+namespace ECS {
+    Component::Component() {
+        this->entity = 0;
+    }
+}
