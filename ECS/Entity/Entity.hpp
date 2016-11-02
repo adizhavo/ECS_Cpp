@@ -34,16 +34,6 @@ namespace ECS {
             return NULL;
         }
         
-        template<typename T> std::vector<T*> GetComponents() {
-            std::vector<T*> requested_components;
-            for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T* comp = static_cast<T*>(this->components.at(cmp_index));
-                if (comp != NULL)
-                    requested_components.push_back(comp);
-            }
-            return requested_components;
-        }
-        
         template<typename T> bool HasComponent() {
             for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
                 T* comp = static_cast<T*>(this->components.at(cmp_index));
