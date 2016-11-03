@@ -26,8 +26,7 @@ namespace ECS {
     void Entity::RemoveAllComponents() {
         for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
             Component* comp = static_cast<Component*>(this->components.at(cmp_index));
-            if (comp != NULL)
-                static_cast<Component*>(comp)->entity = 0;
+            if (comp != NULL) comp->entity = 0;
         }
         this->components.clear();
     }
