@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Component.hpp"
+#include "Matcher.hpp"
 
 namespace ECS {
     class Entity {
@@ -14,6 +15,8 @@ namespace ECS {
         ~Entity();
         
         Entity AddComponent(Component* component, bool notifySystems = true);
+        bool HasComponent(Matcher matcher);
+        void RemoveComponent(Matcher matcher);
         void RemoveAllComponents();
         std::vector<Component*> GetComponents();
         
@@ -23,6 +26,7 @@ namespace ECS {
                 if (comp != NULL) {
                     static_cast<Component*>(comp)->entity = 0;
                     this->components.erase(std::remove(this->components.begin(), this->components.end(), comp), this->components.end());
+                    break;
                 }
             }
         }
