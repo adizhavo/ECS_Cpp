@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		895A973D1DCA337D00565B70 /* Component.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 895A973C1DCA337D00565B70 /* Component.cpp */; };
+		89B3D18C1DCA5AE40069BE66 /* EntityMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */; };
 		89E45AD61DC7B6BD0042532D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E45AD51DC7B6BD0042532D /* main.cpp */; };
 		89E45AFB1DC7CE850042532D /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E45AFA1DC7CE850042532D /* Entity.cpp */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		895A973C1DCA337D00565B70 /* Component.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Component.cpp; path = Component/Component.cpp; sourceTree = "<group>"; };
+		89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntityMatcher.cpp; path = EntityMatcher/EntityMatcher.cpp; sourceTree = "<group>"; };
+		89B3D18B1DCA5AE40069BE66 /* EntityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EntityMatcher.hpp; path = EntityMatcher/EntityMatcher.hpp; sourceTree = "<group>"; };
 		89E45AD21DC7B6BD0042532D /* ECS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECS; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E45AD51DC7B6BD0042532D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		89E45AF91DC7CE7C0042532D /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Component.hpp; path = Component/Component.hpp; sourceTree = "<group>"; };
@@ -44,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89B3D1881DCA59B60069BE66 /* EntityMatcher */ = {
+			isa = PBXGroup;
+			children = (
+				89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */,
+				89B3D18B1DCA5AE40069BE66 /* EntityMatcher.hpp */,
+			);
+			name = EntityMatcher;
+			sourceTree = "<group>";
+		};
 		89E45AC91DC7B6BD0042532D = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +75,7 @@
 		89E45AD41DC7B6BD0042532D /* ECS */ = {
 			isa = PBXGroup;
 			children = (
+				89B3D1881DCA59B60069BE66 /* EntityMatcher */,
 				89E45AF61DC7CE510042532D /* Component */,
 				89E45AF01DC7CD5B0042532D /* Entity */,
 				89E45AD51DC7B6BD0042532D /* main.cpp */,
@@ -147,6 +160,7 @@
 				89E45AFB1DC7CE850042532D /* Entity.cpp in Sources */,
 				895A973D1DCA337D00565B70 /* Component.cpp in Sources */,
 				89E45AD61DC7B6BD0042532D /* main.cpp in Sources */,
+				89B3D18C1DCA5AE40069BE66 /* EntityMatcher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

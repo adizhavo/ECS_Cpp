@@ -13,15 +13,17 @@ namespace ECS {
         Entity();
         ~Entity();
         
-        Entity AddComponent(Component* component, bool notifySystems);
+        Entity AddComponent(Component* component, bool notifySystems = true);
         void RemoveAllComponents();
         std::vector<Component*> GetComponents();
         
         template<typename T> void RemoveComponent() {
             for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
                 T* comp = static_cast<T*>(this->components.at(cmp_index));
-                if (comp != NULL)
+                if (comp != NULL) {
+                    static_cast<Component*>(comp)->entity = 0;
                     this->components.erase(std::remove(this->components.begin(), this->components.end(), comp), this->components.end());
+                }
             }
         }
         
@@ -32,16 +34,6 @@ namespace ECS {
                     return comp;
             }
             return NULL;
-        }
-        
-        template<typename T> std::vector<T*> GetComponents() {
-            std::vector<T*> requested_components;
-            for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T* comp = static_cast<T*>(this->components.at(cmp_index));
-                if (comp != NULL)
-                    requested_components.push_back(comp);
-            }
-            return requested_components;
         }
         
         template<typename T> bool HasComponent() {
