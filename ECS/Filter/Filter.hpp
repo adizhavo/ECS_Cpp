@@ -9,11 +9,11 @@ namespace ECS {
     class Filter {
         public:
         ~Filter();
-        void AnyOf(Matcher m, ...);
-        void AllOf(Matcher m, ...);
-        void NoneOf(Matcher m, ...);
-        bool DoesMatch(Entity* entity);
+        Filter AllOf(int size, ...);
+        Filter AnyOf(int size, ...);
+        Filter NoneOf(int size, ...);
         void Reset();
+        bool DoesMatch(Entity* entity);
         
         private:
         bool HasAnyMatcher(Entity* entity);
