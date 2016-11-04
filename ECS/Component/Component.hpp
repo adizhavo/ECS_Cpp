@@ -1,14 +1,15 @@
 #ifndef Component_hpp
 #define Component_hpp
 
+#include "Matcher.hpp"
+
 namespace ECS {
     class Entity;
     
     class Component {
         public :
-        Component();
-        Entity *entity;
-//        Matcher matcher;
+        Entity* entity = 0;
+        virtual Matcher GetMatcher() = 0;
     };
 }
 
