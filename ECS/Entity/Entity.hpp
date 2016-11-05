@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "Component.hpp"
+#include "ECSMacros.hpp"
 
 namespace ECS {
     class Entity {
@@ -20,19 +21,19 @@ namespace ECS {
         std::vector<Component*> GetComponents();
         
         template<typename T> void RemoveComponent() {
-            for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T* comp = static_cast<T*>(this->components.at(cmp_index));
+            VECTOR_FOR_EACH (cmp_index, components){
+                T* comp = CAST_COMP(cmp_index, components, T);
                 if (comp != NULL) {
                     static_cast<Component*>(comp)->entity = 0;
-                    this->components.erase(std::remove(this->components.begin(), this->components.end(), comp), this->components.end());
+                    VECTOR_REMOVE(comp, components);
                     break;
                 }
             }
         }
         
         template<typename T> T* GetComponent() {
-            for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T* comp = static_cast<T*>(this->components.at(cmp_index));
+            VECTOR_FOR_EACH (cmp_index, components){
+                T* comp = CAST_COMP(cmp_index, components, T);
                 if (comp != NULL)
                     return comp;
             }
@@ -40,8 +41,8 @@ namespace ECS {
         }
         
         template<typename T> bool HasComponent() {
-            for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-                T* comp = static_cast<T*>(this->components.at(cmp_index));
+            VECTOR_FOR_EACH (cmp_index, components){
+                T* comp = CAST_COMP(cmp_index, components, T);
                 if (comp != NULL)
                     return true;
             }

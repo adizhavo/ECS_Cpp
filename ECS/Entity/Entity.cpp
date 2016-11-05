@@ -24,34 +24,30 @@ namespace ECS {
     }
     
     bool Entity::HasComponent(long component_id) {
-        for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-            if (this->components.at(cmp_index)->unique_id() == component_id)
+        VECTOR_FOR_EACH (cmp_index, components)
+            if (components.at(cmp_index)->unique_id() == component_id)
                 return true;
-        }
-        
         return false;
     }
     
     void Entity::RemoveComponent(long component_id) {
-        for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-            Component* cmp = this->components.at(cmp_index);
+       VECTOR_FOR_EACH (cmp_index, components) {
+            Component* cmp = components.at(cmp_index);
             if (cmp->unique_id() == component_id) {
                 cmp->entity = 0;
-                this->components.erase(std::remove(this->components.begin(), this->components.end(), cmp));
+                VECTOR_REMOVE(cmp, components);
                 break;
             }
         }
     }
     
     void Entity::RemoveAllComponents() {
-        for (int cmp_index = 0; cmp_index < this->components.size(); cmp_index ++) {
-            Component* comp = static_cast<Component*>(this->components.at(cmp_index));
-            if (comp != NULL) comp->entity = 0;
-        }
-        this->components.clear();
+        VECTOR_FOR_EACH (cmp_index, components)
+            components.at(cmp_index)->entity = 0;
+        components.clear();
     }
     
     std::vector<Component*> Entity::GetComponents() {
-        return this->components;
+        return components;
     }
 }
