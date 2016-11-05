@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "Component.hpp"
-#include "Matcher.hpp"
 
 namespace ECS {
     class Entity {

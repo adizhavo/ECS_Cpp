@@ -2,7 +2,6 @@
 #define Filter_hpp
 
 #include <vector>
-#include "Matcher.hpp"
 #include "Entity.hpp"
 
 namespace ECS {
