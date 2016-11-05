@@ -1,39 +1,37 @@
 #include "Filter.hpp"
 #include <stdarg.h>
 
-#include <iostream>
-
 namespace ECS {
     Filter::~Filter() {
         Reset();
     }
     
     Filter Filter::AllOf(int size, ...) {
-        va_list matchers;
-        va_start(matchers, size);
-        for(int m_index = 0; m_index < size; m_index ++) {
-            ECS::Matcher match = static_cast<ECS::Matcher>(va_arg(matchers, int));
-            this->allOf.push_back(match);
+        va_list ids;
+        va_start(ids, size);
+        for(int i = 0; i < size; i ++) {
+            long unique_id = va_arg(ids, long);
+            this->allOf.push_back(unique_id);
         }
         return *this;
     }
     
     Filter Filter::AnyOf(int size, ...) {
-        va_list matchers;
-        va_start(matchers, size);
-        for(int m_index = 0; m_index < size; m_index ++) {
-            ECS::Matcher match = static_cast<ECS::Matcher>(va_arg(matchers, int));
-            this->anyOf.push_back(match);
+        va_list ids;
+        va_start(ids, size);
+        for(int i = 0; i < size; i ++) {
+            long unique_id = va_arg(ids, long);
+            this->anyOf.push_back(unique_id);
         }
         return *this;
     }
     
     Filter Filter::NoneOf(int size, ...) {
-        va_list matchers;
-        va_start(matchers, size);
-        for(int m_index = 0; m_index < size; m_index ++) {
-            ECS::Matcher match = static_cast<ECS::Matcher>(va_arg(matchers, int));
-            this->noneOf.push_back(match);
+        va_list ids;
+        va_start(ids, size);
+        for(int i = 0; i < size; i ++) {
+            long unique_id = va_arg(ids, long);
+            this->noneOf.push_back(unique_id);
         }
         return *this;
     }
@@ -49,23 +47,23 @@ namespace ECS {
     }
     
     bool Filter::HasAnyMatcher(Entity* entity) {
-        for (int m = 0; m < this->anyOf.size(); m ++)
-            if (entity->HasComponent(this->anyOf.at(m)))
+        for (int i = 0; i < this->anyOf.size(); i ++)
+            if (entity->HasComponent(this->anyOf.at(i)))
                 return true;
         return this->anyOf.size() == 0;
     }
     
     bool Filter::HasAllMatchers(Entity* entity) {
         int componentCounter = 0;
-        for (int m = 0; m < this->allOf.size(); m ++)
-            if (entity->HasComponent(this->allOf.at(m)))
+        for (int i = 0; i < this->allOf.size(); i ++)
+            if (entity->HasComponent(this->allOf.at(i)))
                 componentCounter ++;
         return this->allOf.size() == 0 || (componentCounter != 0 && componentCounter == this->allOf.size());
     }
     
     bool Filter::HasNoneMatcher(Entity* entity) {
-        for (int m = 0; m < this->noneOf.size(); m ++)
-            if (entity->HasComponent(this->noneOf.at(m)))
+        for (int i = 0; i < this->noneOf.size(); i ++)
+            if (entity->HasComponent(this->noneOf.at(i)))
                 return false;
         return true;
     }
