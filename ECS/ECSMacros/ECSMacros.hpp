@@ -18,4 +18,7 @@ long unique_id = va_arg(ids, long);                                             
 vector.push_back(unique_id);                                                    \
 }                                                                               \
 
+#define COMP_ID(c)                                                              \
+typeid(c).hash_code()                                                           \
+
 #endif

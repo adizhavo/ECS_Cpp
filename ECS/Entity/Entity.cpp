@@ -12,8 +12,8 @@ namespace ECS {
     }
     
     Entity Entity::AddComponent(Component* component, bool notifySystems) {
-        if (!this->HasComponent(component->unique_id())) {
-            this->components.push_back(component);
+        if (!HasComponent(component->unique_id())) {
+            components.push_back(component);
             component->entity = this;
             
             if (notifySystems) {

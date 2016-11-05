@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		890576ED1DCB57E70064C517 /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Filter.cpp; path = Filter/Filter.cpp; sourceTree = "<group>"; };
 		890576EE1DCB57E70064C517 /* Filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Filter.hpp; path = Filter/Filter.hpp; sourceTree = "<group>"; };
-		899192F11DCE13C500837E3B /* IDProvider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IDProvider.hpp; path = IDProvider/IDProvider.hpp; sourceTree = "<group>"; };
 		899193011DCE300700837E3B /* ECSMacros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ECSMacros.hpp; path = ECSMacros/ECSMacros.hpp; sourceTree = "<group>"; };
 		899193041DCE324500837E3B /* ExampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExampleComponents.hpp; path = ExampleComponents/ExampleComponents.hpp; sourceTree = "<group>"; };
 		89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntityMatcher.cpp; path = EntityMatcher/EntityMatcher.cpp; sourceTree = "<group>"; };
@@ -58,14 +57,6 @@
 				890576EE1DCB57E70064C517 /* Filter.hpp */,
 			);
 			name = Filter;
-			sourceTree = "<group>";
-		};
-		899192EF1DCE139500837E3B /* IDProvider */ = {
-			isa = PBXGroup;
-			children = (
-				899192F11DCE13C500837E3B /* IDProvider.hpp */,
-			);
-			name = IDProvider;
 			sourceTree = "<group>";
 		};
 		899192F61DCE1D9700837E3B /* ExampleComponents */ = {
@@ -114,7 +105,6 @@
 			children = (
 				899192FF1DCE2FE300837E3B /* Macros */,
 				899192F61DCE1D9700837E3B /* ExampleComponents */,
-				899192EF1DCE139500837E3B /* IDProvider */,
 				890576EC1DCB57CA0064C517 /* Filter */,
 				89B3D1881DCA59B60069BE66 /* EntityMatcher */,
 				89E45AF61DC7CE510042532D /* Component */,
