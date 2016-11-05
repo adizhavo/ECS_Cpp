@@ -15,8 +15,8 @@ namespace ECS {
         ~Entity();
         
         Entity AddComponent(Component* component, bool notifySystems = true);
-        bool HasComponent(Matcher matcher);
-        void RemoveComponent(Matcher matcher);
+        bool HasComponent(long component_id);
+        void RemoveComponent(long component_id);
         void RemoveAllComponents();
         std::vector<Component*> GetComponents();
         

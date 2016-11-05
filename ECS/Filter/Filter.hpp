@@ -20,9 +20,9 @@ namespace ECS {
         bool HasAllMatchers(Entity* entity);
         bool HasNoneMatcher(Entity* entity);
         
-        std::vector<Matcher> anyOf;
-        std::vector<Matcher> allOf;
-        std::vector<Matcher> noneOf;
+        std::vector<long> anyOf;
+        std::vector<long> allOf;
+        std::vector<long> noneOf;
     };
 }
 
