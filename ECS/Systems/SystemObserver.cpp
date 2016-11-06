@@ -12,13 +12,13 @@ namespace ECS {
     
     void SystemObserver::Unsubscribe(ReactiveSystem* system) {
         VECTOR_FOR_EACH(index, subscribedSystems)
-        if (subscribedSystems[index] != NULL && subscribedSystems[index] == system)
+        if (subscribedSystems.at(index) != NULL && subscribedSystems.at(index) == system)
             VECTOR_REMOVE(system, subscribedSystems);
     }
     
     void SystemObserver::Notify(Entity *ent) {
         VECTOR_FOR_EACH(index, subscribedSystems)
-        if (subscribedSystems[index]->GetFilter().DoesMatch(ent))
-            subscribedSystems[index]->Execute(ent);
+        if (subscribedSystems.at(index)->GetFilter().DoesMatch(ent))
+            subscribedSystems.at(index)->Execute(ent);
     }
 }

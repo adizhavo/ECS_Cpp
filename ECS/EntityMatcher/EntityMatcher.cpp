@@ -10,7 +10,7 @@ namespace ECS {
     
     void EntityMatcher::UnSubscribe(ECS::Entity* entity) {
         VECTOR_FOR_EACH(index, subscribedEntities)
-        if (subscribedEntities[index] != NULL && subscribedEntities[index] == entity)
+        if (subscribedEntities.at(index) != NULL && subscribedEntities.at(index) == entity)
             VECTOR_REMOVE(entity, subscribedEntities);
     }
 }
