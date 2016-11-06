@@ -1,5 +1,5 @@
 #include "EntityMatcher.hpp"
-#include "ECSMacros.hpp"    
+#include "ECSMacros.hpp"
 
 namespace ECS {
     std::vector<Entity*>EntityMatcher::subscribedEntities;
@@ -10,7 +10,7 @@ namespace ECS {
     
     void EntityMatcher::UnSubscribe(ECS::Entity* entity) {
         VECTOR_FOR_EACH(index, subscribedEntities)
-            if (subscribedEntities[index] != NULL && subscribedEntities[index] == entity)
-                VECTOR_REMOVE(entity, subscribedEntities);
+        if (subscribedEntities[index] != NULL && subscribedEntities[index] == entity)
+            VECTOR_REMOVE(entity, subscribedEntities);
     }
 }
