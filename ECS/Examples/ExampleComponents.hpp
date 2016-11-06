@@ -10,14 +10,14 @@ class FirstComponent : public Component {
     public :
     long unique_id() {
         return COMP_ID(FirstComponent);
-    };
+    }
 };
 
 class SecondComponent : public Component {
     public :
     long unique_id() {
         return COMP_ID(SecondComponent);
-    };
+    }
 };
 
 #endif

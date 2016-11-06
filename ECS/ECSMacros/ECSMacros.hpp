@@ -1,8 +1,8 @@
 #ifndef ECSMacros_hpp
 #define ECSMacros_hpp
 
-#define CAST_COMP(index, components, Type)                                      \
-dynamic_cast<Type*>(components.at(index));                                      \
+#define CAST_COMP(index, vector, Type)                                      \
+dynamic_cast<Type*>(vector.at(index));                                      \
 
 #define VECTOR_REMOVE(element, vector)                                          \
 vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
