@@ -31,7 +31,7 @@
 		890576ED1DCB57E70064C517 /* Filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Filter.cpp; path = Filter/Filter.cpp; sourceTree = "<group>"; };
 		890576EE1DCB57E70064C517 /* Filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Filter.hpp; path = Filter/Filter.hpp; sourceTree = "<group>"; };
 		899193011DCE300700837E3B /* ECSMacros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ECSMacros.hpp; path = ECSMacros/ECSMacros.hpp; sourceTree = "<group>"; };
-		899193041DCE324500837E3B /* ExampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExampleComponents.hpp; path = ExampleComponents/ExampleComponents.hpp; sourceTree = "<group>"; };
+		899193041DCE324500837E3B /* ExampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExampleComponents.hpp; path = Examples/ExampleComponents.hpp; sourceTree = "<group>"; };
 		89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntityMatcher.cpp; path = EntityMatcher/EntityMatcher.cpp; sourceTree = "<group>"; };
 		89B3D18B1DCA5AE40069BE66 /* EntityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = EntityMatcher.hpp; path = EntityMatcher/EntityMatcher.hpp; sourceTree = "<group>"; };
 		89E45AD21DC7B6BD0042532D /* ECS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECS; sourceTree = BUILT_PRODUCTS_DIR; };
