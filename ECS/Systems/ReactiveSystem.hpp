@@ -1,10 +1,10 @@
 #ifndef ReactiveSystem_hpp
 #define ReactiveSystem_hpp
 
+#include "Filter.hpp"
+#include "Entity.hpp"
+
 namespace ECS {
-    class Entity;
-    class Filter;
-    
     class ReactiveSystem {
         public :
         ReactiveSystem();

@@ -1,6 +1,5 @@
 #include "ReactiveSystem.hpp"
 #include "SystemObserver.hpp"
-#include "Filter.hpp"
 
 namespace ECS {
     ReactiveSystem::ReactiveSystem() {

@@ -142,8 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				89E5F35D1DCF34D300775CED /* ReactiveSystem.cpp */,
-				89E5F35F1DCF353600775CED /* SystemObserver.cpp */,
 				89E5F35B1DCF335700775CED /* ReactiveSystem.hpp */,
+				89E5F35F1DCF353600775CED /* SystemObserver.cpp */,
 				89E5F3601DCF353600775CED /* SystemObserver.hpp */,
 			);
 			name = Systems;
