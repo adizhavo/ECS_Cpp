@@ -37,6 +37,7 @@
 		89E45AF91DC7CE7C0042532D /* Component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Component.hpp; path = Component/Component.hpp; sourceTree = "<group>"; };
 		89E45AFA1DC7CE850042532D /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = Entity/Entity.cpp; sourceTree = "<group>"; };
 		89E45AFC1DC7CE8C0042532D /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Entity.hpp; path = Entity/Entity.hpp; sourceTree = "<group>"; };
+		89E5F35B1DCF335700775CED /* ReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ReactiveSystem.hpp; path = Systems/ReactiveSystem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +104,7 @@
 		89E45AD41DC7B6BD0042532D /* ECS */ = {
 			isa = PBXGroup;
 			children = (
+				89E5F3581DCF332000775CED /* Systems */,
 				899192FF1DCE2FE300837E3B /* Macros */,
 				899192F61DCE1D9700837E3B /* ExampleComponents */,
 				890576EC1DCB57CA0064C517 /* Filter */,
@@ -129,6 +131,14 @@
 				89E45AF91DC7CE7C0042532D /* Component.hpp */,
 			);
 			name = Component;
+			sourceTree = "<group>";
+		};
+		89E5F3581DCF332000775CED /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				89E5F35B1DCF335700775CED /* ReactiveSystem.hpp */,
+			);
+			name = Systems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
