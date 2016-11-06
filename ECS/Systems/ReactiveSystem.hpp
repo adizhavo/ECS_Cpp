@@ -10,7 +10,7 @@ namespace ECS {
         virtual Filter GetFilter() = 0;
         // if a component is added and if the entity matches the filter,
         // the systems is notified
-        vitual void Execute(Entity* entity) = 0;
+        virtual void Execute(Entity* entity) = 0;
     };
 }
 
