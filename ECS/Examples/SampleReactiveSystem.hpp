@@ -13,7 +13,7 @@ class SampleReactiveSystem : public ReactiveSystem {
     }
     
     void Execute(Entity* entity) {
-        std::cout << "\nEntity received\n";
+        std::cout << "Entity received\n";
     };
     
     Filter GetFilter() {
