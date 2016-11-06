@@ -1,4 +1,5 @@
 #include "Entity.hpp"
+#include "SystemObserver.hpp"
 #include "EntityMatcher.hpp"
 
 namespace ECS {
@@ -16,9 +17,8 @@ namespace ECS {
             components.push_back(component);
             component->entity = this;
             
-            if (notifySystems) {
-                // TODO : notify systems
-            }
+            if (notifySystems)
+                SystemObserver::Notify(this);
         }
         return *this;
     }
