@@ -1,4 +1,5 @@
 #include "Entity.hpp"
+#include "SystemObserver.hpp"
 #include "EntityMatcher.hpp"
 
 namespace ECS {
@@ -16,22 +17,21 @@ namespace ECS {
             components.push_back(component);
             component->entity = this;
             
-            if (notifySystems) {
-                // TODO : notify systems
-            }
+            if (notifySystems)
+                SystemObserver::Notify(this);
         }
         return *this;
     }
     
     bool Entity::HasComponent(long component_id) {
         VECTOR_FOR_EACH (cmp_index, components)
-            if (components.at(cmp_index)->unique_id() == component_id)
-                return true;
+        if (components.at(cmp_index)->unique_id() == component_id)
+            return true;
         return false;
     }
     
     void Entity::RemoveComponent(long component_id) {
-       VECTOR_FOR_EACH (cmp_index, components) {
+        VECTOR_FOR_EACH (cmp_index, components) {
             Component* cmp = components.at(cmp_index);
             if (cmp->unique_id() == component_id) {
                 cmp->entity = 0;
@@ -43,7 +43,7 @@ namespace ECS {
     
     void Entity::RemoveAllComponents() {
         VECTOR_FOR_EACH (cmp_index, components)
-            components.at(cmp_index)->entity = 0;
+        components.at(cmp_index)->entity = 0;
         components.clear();
     }
     
