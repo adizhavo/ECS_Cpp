@@ -2,9 +2,10 @@
 #define Filter_hpp
 
 #include <vector>
-#include "Entity.hpp"
 
 namespace ECS {
+    class Entity;
+    
     class Filter {
         public:
         ~Filter();

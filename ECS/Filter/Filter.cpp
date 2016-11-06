@@ -1,6 +1,7 @@
 #include <stdarg.h>
 
 #include "Filter.hpp"
+#include "Entity.hpp"
 #include "ECSMacros.hpp"
 
 namespace ECS {
