@@ -2,7 +2,7 @@
 #define ECSMacros_hpp
 
 #define CAST_COMP(index, components, Type)                                      \
-static_cast<Type*>(components.at(index));                                       \
+dynamic_cast<Type*>(components.at(index));                                      \
 
 #define VECTOR_REMOVE(element, vector)                                          \
 vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
