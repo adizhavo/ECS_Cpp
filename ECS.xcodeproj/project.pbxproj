@@ -11,6 +11,8 @@
 		89B3D18C1DCA5AE40069BE66 /* EntityMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89B3D18A1DCA5AE40069BE66 /* EntityMatcher.cpp */; };
 		89E45AD61DC7B6BD0042532D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E45AD51DC7B6BD0042532D /* main.cpp */; };
 		89E45AFB1DC7CE850042532D /* Entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E45AFA1DC7CE850042532D /* Entity.cpp */; };
+		89E5F35E1DCF34D300775CED /* ReactiveSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E5F35D1DCF34D300775CED /* ReactiveSystem.cpp */; };
+		89E5F3611DCF353600775CED /* SystemObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89E5F35F1DCF353600775CED /* SystemObserver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +40,9 @@
 		89E45AFA1DC7CE850042532D /* Entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Entity.cpp; path = Entity/Entity.cpp; sourceTree = "<group>"; };
 		89E45AFC1DC7CE8C0042532D /* Entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Entity.hpp; path = Entity/Entity.hpp; sourceTree = "<group>"; };
 		89E5F35B1DCF335700775CED /* ReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ReactiveSystem.hpp; path = Systems/ReactiveSystem.hpp; sourceTree = "<group>"; };
+		89E5F35D1DCF34D300775CED /* ReactiveSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReactiveSystem.cpp; path = Systems/ReactiveSystem.cpp; sourceTree = "<group>"; };
+		89E5F35F1DCF353600775CED /* SystemObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SystemObserver.cpp; path = Systems/SystemObserver.cpp; sourceTree = "<group>"; };
+		89E5F3601DCF353600775CED /* SystemObserver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SystemObserver.hpp; path = Systems/SystemObserver.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +141,10 @@
 		89E5F3581DCF332000775CED /* Systems */ = {
 			isa = PBXGroup;
 			children = (
+				89E5F35D1DCF34D300775CED /* ReactiveSystem.cpp */,
+				89E5F35F1DCF353600775CED /* SystemObserver.cpp */,
 				89E5F35B1DCF335700775CED /* ReactiveSystem.hpp */,
+				89E5F3601DCF353600775CED /* SystemObserver.hpp */,
 			);
 			name = Systems;
 			sourceTree = "<group>";
@@ -201,6 +209,8 @@
 				89E45AFB1DC7CE850042532D /* Entity.cpp in Sources */,
 				89E45AD61DC7B6BD0042532D /* main.cpp in Sources */,
 				89B3D18C1DCA5AE40069BE66 /* EntityMatcher.cpp in Sources */,
+				89E5F3611DCF353600775CED /* SystemObserver.cpp in Sources */,
+				89E5F35E1DCF34D300775CED /* ReactiveSystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
