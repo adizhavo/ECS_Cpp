@@ -1,18 +1,19 @@
-DEPS = -I$(COMP_DEPS) -I$(MACRO_DEPS) -I$(SYSTOB_DEPS) -I$(EMATCH_DEPS)
 FILES = Entity.hpp Entity.cpp
+_DEPS = Systems Component ECSMacros EntityMatcher
 MESSAGE = Compiling entity ..
 
-COMP_DEPS = ../Component
-MACRO_DEPS = ../ECSMacros
-SYSTOB_DEPS = ../Systems
-EMATCH_DEPS = ../EntityMatcher
+DEPS = $(patsubst %,-I../%,$(_DEPS))
 
 CC = gcc
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -c
 
-comp : $(FILES)
+.SILENT: all clean
+
+all :	$(FILES)
 	@echo $(MESSAGE)
-	$(CC) $(CFLAGS) -c $(DEPS) $(FILES)
+	$(CC) $(CFLAGS) $(DEPS) $(FILES)
 
 clean: 
 	-rm *.o
+
+

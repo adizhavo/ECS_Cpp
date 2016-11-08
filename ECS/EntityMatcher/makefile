@@ -1,16 +1,18 @@
-DEPS = -I$(FILTER_DEPS) -I$(MACRO_DEPS)
 FILES = EntityMatcher.hpp EntityMatcher.cpp
+_DEPS = Filter ECSMacros
 MESSAGE = Compiling entity matcher ..
 
-FILTER_DEPS = ../Filter
-MACRO_DEPS = ../ECSMacros
+DEPS = $(patsubst %,-I../%,$(_DEPS))
 
 CC = gcc
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -c
 
-comp : $(FILES)
+.SILENT: all clean
+
+all :	$(FILES)
 	@echo $(MESSAGE)
-	$(CC) $(CFLAGS) -c $(DEPS) $(FILES)
+	$(CC) $(CFLAGS) $(DEPS) $(FILES)
 
 clean: 
 	-rm *.o
+
