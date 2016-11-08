@@ -6,8 +6,11 @@ namespace ECS {
     
     class Component {
         public :
-        Entity* entity = 0;
+        Entity* entity;
         virtual long unique_id() = 0;
+        Component() {
+            this->entity = 0;
+        }
     };
 }
 
