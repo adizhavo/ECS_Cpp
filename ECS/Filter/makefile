@@ -1,17 +1,19 @@
-DEPS = -I$(ENT_DEPS) -I$(MACRO_DEPS) -I$(COMP_DEPS)
-FILES = Filter.hpp Filter.cpp
+FILES = Filter.cpp
+_DEPS = Entity Component ECSMacros
 MESSAGE = Compiling filter ..
 
-MACRO_DEPS = ../ECSMacros
-ENT_DEPS = ../Entity
-COMP_DEPS = ../Component
+DEPS = $(patsubst %,-I../%,$(_DEPS))
 
 CC = gcc
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -c
 
-comp : $(FILES)
+.SILENT: all clean
+
+all :	$(FILES)
 	@echo $(MESSAGE)
-	$(CC) $(CFLAGS) -c $(DEPS) $(FILES)
+	$(CC) $(CFLAGS) $(DEPS) $(FILES)
 
 clean: 
 	-rm *.o
+
+

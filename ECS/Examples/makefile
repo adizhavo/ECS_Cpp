@@ -1,20 +1,17 @@
-DEPS = -I$(COMP_DEPS) -I$(MACRO_DEPS) -I$(SYSTOB_DEPS) -I$(EMATCH_DEPS) -I$(FILT_DEPS) -I$(ENT_DEPS) -I$(SYST_DEPS) 
 FILES = ExampleComponents.hpp SampleReactiveSystem.hpp
+_DEPS = Entity EntityMatcher Filter Systems Component ECSMacros
 MESSAGE = Compiling examples ..
 
-COMP_DEPS = ../Component
-MACRO_DEPS = ../ECSMacros
-EMATCH_DEPS = ../EntityMatcher
-FILT_DEPS = ../Filter
-ENT_DEPS = ../Entity
-SYST_DEPS = ../Systems
+DEPS = $(patsubst %,-I../%,$(_DEPS))
 
 CC = gcc
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -c
 
-comp : $(FILES)
+.SILENT: all clean
+
+all :	$(FILES)
 	@echo $(MESSAGE)
-	$(CC) $(CFLAGS) -c $(DEPS) $(FILES)
+	$(CC) $(CFLAGS) $(DEPS) $(FILES)
 
 clean: 
 	-rm *.o

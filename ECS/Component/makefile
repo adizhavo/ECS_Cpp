@@ -1,13 +1,14 @@
-DEPS = 
 FILES = Component.hpp
 MESSAGE = Compiling component ..
 
 CC = gcc
-CFLAGS  = -g -Wall
+CFLAGS  = -g -Wall -c
 
-comp : $(FILES)
+.SILENT: all clean
+
+all :	$(FILES)
 	@echo $(MESSAGE)
-	$(CC) $(CFLAGS) -c $(DEPS) $(FILES)
+	$(CC) $(CFLAGS)  $(FILES)
 
 clean: 
 	-rm *.o
