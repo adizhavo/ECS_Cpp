@@ -3,6 +3,7 @@
 
 #include "Component.hpp"
 #include "ECSMacros.hpp"
+#include <typeinfo>
 
 using namespace ECS;
 
