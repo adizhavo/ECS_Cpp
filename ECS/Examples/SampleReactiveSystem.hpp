@@ -2,7 +2,11 @@
 #define SampleReactiveSystem_hpp
 
 #include "ReactiveSystem.hpp"
+#include "ExampleComponents.hpp"
 #include "ECSMacros.hpp"
+
+#include <typeinfo>
+#include <iostream>
 
 using namespace ECS;
 

@@ -43,7 +43,7 @@
 		89E5F35D1DCF34D300775CED /* ReactiveSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReactiveSystem.cpp; path = Systems/ReactiveSystem.cpp; sourceTree = "<group>"; };
 		89E5F35F1DCF353600775CED /* SystemObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SystemObserver.cpp; path = Systems/SystemObserver.cpp; sourceTree = "<group>"; };
 		89E5F3601DCF353600775CED /* SystemObserver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SystemObserver.hpp; path = Systems/SystemObserver.hpp; sourceTree = "<group>"; };
-		89E5F3641DCF449200775CED /* SampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SampleReactiveSystem.hpp; path = Examples/SampleReactiveSystem.hpp; sourceTree = "<group>"; };
+		89E5F3641DCF449200775CED /* SampleReactiveSystem.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; name = SampleReactiveSystem.hpp; path = Examples/SampleReactiveSystem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
