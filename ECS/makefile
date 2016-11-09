@@ -15,7 +15,7 @@ INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
 all: $(SRCS)
 	@echo \\033[33mCOMPILING FILES in $(SRC_DIRS)\\033""
-	@echo \\033[34mincludes dir: $(INC_DIRS)\\034""
+	@echo \\033[34mCOMPILING INCLUDES dir: $(INC_DIRS)\\034""
 	$(CC) $(CFLAGS) $(INC_FLAGS) $(SRCS)
 	@echo \\033[32mCOMPILATION FINISHED\\033""
 
