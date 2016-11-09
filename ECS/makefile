@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS  = -g -Wall -c
+CFLAGS  = -g -Wall -c -std=c++11
 
 SRC_DIRS = ./src
 INC_DIRS = ./include
