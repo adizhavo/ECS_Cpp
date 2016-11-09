@@ -1,21 +1,6 @@
 #ifndef reactiveSystem_hpp
 #define reactiveSystem_hpp
 
-#include <typeinfo>
-
-#define CREATE_SYST(s, filter)     \
-using namespace ECS;               \
-class s : public ReactiveSystem {  \
-    public :                       \
-    Filter GetFilter() {           \
-        return filter;             \
-    }                              \
-
-#define RECEIVE_MATCHED_ENT        \
-void Execute(Entity* entity) {     \
-
-#define END };
-
 #include "filter.hpp"
 #include "entity.hpp"
 
