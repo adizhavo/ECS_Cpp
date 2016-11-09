@@ -1,8 +1,8 @@
 #include <stdarg.h>
 
-#include "Filter.hpp"
-#include "Entity.hpp"
-#include "ECSMacros.hpp"
+#include "filter.hpp"
+#include "entity.hpp"
+#include "ecsmacros.hpp"
 
 namespace ECS {
     Filter::~Filter() {

@@ -1,6 +1,6 @@
-#include "Entity.hpp"
-#include "SystemObserver.hpp"
-#include "EntityMatcher.hpp"
+#include "entity.hpp"
+#include "systemObserver.hpp"
+#include "entityMatcher.hpp"
 
 namespace ECS {
     Entity::Entity() {

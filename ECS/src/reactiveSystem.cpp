@@ -1,5 +1,5 @@
-#include "ReactiveSystem.hpp"
-#include "SystemObserver.hpp"
+#include "reactiveSystem.hpp"
+#include "systemObserver.hpp"
 
 namespace ECS {
     ReactiveSystem::ReactiveSystem() {

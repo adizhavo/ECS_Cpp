@@ -1,6 +1,6 @@
-#include "EntityMatcher.hpp"
-#include "Filter.hpp"
-#include "ECSMacros.hpp"
+#include "entityMatcher.hpp"
+#include "filter.hpp"
+#include "ecsmacros.hpp"
 
 namespace ECS {
     std::vector<Entity*>EntityMatcher::subscribedEntities;

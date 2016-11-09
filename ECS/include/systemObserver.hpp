@@ -1,5 +1,5 @@
-#ifndef SystemObserver_hpp
-#define SystemObserver_hpp
+#ifndef systemObserver_hpp
+#define systemObserver_hpp
 
 #include <vector>
 

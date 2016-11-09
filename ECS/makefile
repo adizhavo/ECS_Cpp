@@ -1,22 +1,33 @@
-.SILENT: build clean example
+CC = gcc
+CFLAGS  = -g -Wall -c
 
-build : 
-	@echo \\033[33mCOMPILATION STARTED..\\033[0m""
-	
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && make" \;
+SRC_DIRS = ./src
+INC_DIRS = ./include
+EXP_DIRS = ./examples
 
-	@echo \\033[32mCOMPILATION FINISHED\\033[0m""
+SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
+INCS := $(shell find $(INC_DIRS) -name *.hpp)
+EXPS := $(shell find $(EXP_DIRS) -name *.hpp)
 
-example :
-	@echo \\033[33mCOMPILATION OF EXAMPLES STARTED..\\033[0m""
+INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
-	cd Examples/ && make
+.SILENT: all example clean
 
-	@echo \\033[32mCOMPILATION FINISHED\\033[0m""
+all: $(SRCS)
+	@echo \\033[33mCOMPILING FILES in $(SRC_DIRS)\\033""
+	@echo \\033[34mCOMPILING INCLUDES dir: $(INC_DIRS)\\034""
+	$(CC) $(CFLAGS) $(INC_FLAGS) $(SRCS)
+	@echo \\033[32mCOMPILATION FINISHED\\033""
 
-clean: 
-	@echo \\033[31mCLEANING STARTED..\\033[0m""
+example: $(EXPS) 
+	@echo \\033[33mCOMPILING EXAMPLES in $(EXP_DIRS)\\033""
+	$(CC) $(CFLAGS) $(INC_FLAGS) $(EXPS)
+	@echo \\033[32mCOMPILATION FINISHED..\\033""
 
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && make clean” \;
+.PHONY: clean
 
-	@echo \\033[31mCLEANING FINISHED\\033[0m""
+clean:
+	@echo \\033[31mCLEANING STARTED..\\033""
+	-rm *.o
+	cd $(EXP_DIRS) -rm *.o
+	@echo \\033[31mCLEANING FINISHED\\033""

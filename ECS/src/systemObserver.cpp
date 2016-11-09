@@ -1,7 +1,7 @@
-#include "SystemObserver.hpp"
-#include "ReactiveSystem.hpp"
-#include "Filter.hpp"
-#include "ECSMacros.hpp"
+#include "systemObserver.hpp"
+#include "reactiveSystem.hpp"
+#include "filter.hpp"
+#include "ecsmacros.hpp"
 
 namespace ECS {
     std::vector<ReactiveSystem*>SystemObserver::subscribedSystems;

@@ -1,9 +1,9 @@
-#ifndef Entity_hpp
-#define Entity_hpp
+#ifndef entity_hpp
+#define entity_hpp
 
 #include <vector>
-#include "Component.hpp"
-#include "ECSMacros.hpp"
+#include "component.hpp"
+#include "ecsmacros.hpp"
 
 namespace ECS {
     class Entity {
