@@ -18,7 +18,6 @@ void Execute(Entity* entity) {     \
 
 #include "filter.hpp"
 #include "entity.hpp"
-#include "ecsmacros.hpp"
 
 namespace ECS {
     class ReactiveSystem {

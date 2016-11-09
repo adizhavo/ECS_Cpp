@@ -1,7 +1,9 @@
 #include "systemObserver.hpp"
 #include "reactiveSystem.hpp"
 #include "filter.hpp"
-#include "ecsmacros.hpp"
+
+#define VECTOR_REMOVE(element, vector)                                          \
+vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
 
 namespace ECS {
     std::vector<ReactiveSystem*>SystemObserver::subscribedSystems;
@@ -11,14 +13,14 @@ namespace ECS {
     }
     
     void SystemObserver::Unsubscribe(ReactiveSystem* system) {
-        VECTOR_FOR_EACH(index, subscribedSystems)
-        if (subscribedSystems.at(index) != NULL && subscribedSystems.at(index) == system)
+        for (ReactiveSystem* rs : subscribedSystems )
+        if (rs != NULL && rs == system)
             VECTOR_REMOVE(system, subscribedSystems);
     }
     
     void SystemObserver::Notify(Entity *ent) {
-        VECTOR_FOR_EACH(index, subscribedSystems)
-        if (subscribedSystems.at(index)->GetFilter().DoesMatch(ent))
-            subscribedSystems.at(index)->Execute(ent);
+        for (ReactiveSystem* rs : subscribedSystems )
+        if (rs->GetFilter().DoesMatch(ent))
+            rs->Execute(ent);
     }
 }
