@@ -1,5 +1,5 @@
-#ifndef ECSMacros_hpp
-#define ECSMacros_hpp
+#ifndef ecsmacros_hpp
+#define ecsmacros_hpp
 
 #define CAST_COMP(index, vector, Type)                                      \
 dynamic_cast<Type*>(vector.at(index));                                      \

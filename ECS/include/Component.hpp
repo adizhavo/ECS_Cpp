@@ -1,5 +1,5 @@
-#ifndef Component_hpp
-#define Component_hpp
+#ifndef component_hpp
+#define component_hpp
 
 namespace ECS {
     class Entity;

@@ -1,5 +1,5 @@
-#ifndef Filter_hpp
-#define Filter_hpp
+#ifndef filter_hpp
+#define filter_hpp
 
 #include <vector>
 

@@ -1,5 +1,5 @@
-#ifndef EntityMatcher_hpp
-#define EntityMatcher_hpp
+#ifndef entityMatcher_hpp
+#define entityMatcher_hpp
 
 #include <vector>
 
