@@ -4,6 +4,8 @@
 #include "reactiveSystem.hpp"
 #include "sampleComponents.hpp"
 #include "ecsmacros.hpp"
+#include "filter.hpp"
+#include "Entity.hpp"
 
 #include <typeinfo>
 #include <iostream>
