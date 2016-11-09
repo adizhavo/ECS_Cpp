@@ -2,23 +2,11 @@
 #define sampleComponents_hpp
 
 #include "component.hpp"
-#include "ecsmacros.hpp"
-#include <typeinfo>
 
-using namespace ECS;
+CREATE_COMPONENT(FirstComponent);
+ENDCOMP;
 
-class FirstComponent : public Component {
-    public :
-    long unique_id() {
-        return COMP_ID(FirstComponent);
-    }
-};
-
-class SecondComponent : public Component {
-    public :
-    long unique_id() {
-        return COMP_ID(SecondComponent);
-    }
-};
+CREATE_COMPONENT(SecondComponent);
+ENDCOMP;
 
 #endif
