@@ -1,8 +1,8 @@
-#ifndef ExampleComponents_hpp
-#define ExampleComponents_hpp
+#ifndef sampleComponents_hpp
+#define sampleComponents_hpp
 
-#include "Component.hpp"
-#include "ECSMacros.hpp"
+#include "component.hpp"
+#include "ecsmacros.hpp"
 #include <typeinfo>
 
 using namespace ECS;

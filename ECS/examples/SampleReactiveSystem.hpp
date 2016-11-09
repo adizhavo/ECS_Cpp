@@ -1,9 +1,9 @@
-#ifndef SampleReactiveSystem_hpp
-#define SampleReactiveSystem_hpp
+#ifndef sampleReactiveSystem_hpp
+#define sampleReactiveSystem_hpp
 
-#include "ReactiveSystem.hpp"
-#include "ExampleComponents.hpp"
-#include "ECSMacros.hpp"
+#include "reactiveSystem.hpp"
+#include "sampleComponents.hpp"
+#include "ecsmacros.hpp"
 
 #include <typeinfo>
 #include <iostream>
