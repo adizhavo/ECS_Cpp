@@ -3,17 +3,21 @@
 
 #include <typeinfo>
 
+#define COMP_ID(c)                \
+typeid(c).hash_code()             \
+
+#define RETURN_ID(c)              \
+long unique_id() {                \
+return COMP_ID(c);                \
+}                                 \
+
 #define CREATE_COMPONENT(c)       \
 using namespace ECS;              \
 class c : public Component {      \
     public :                      \
-    long unique_id() {            \
-        return COMP_ID(c);        \
-    }                             \
+    RETURN_ID(c)
 
 #define ENDCOMP };
-
-#include "ecsmacros.hpp"
 
 namespace ECS {
     class Entity;
