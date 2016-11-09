@@ -1,22 +1,24 @@
-.SILENT: build clean example
+CC = gcc
+CFLAGS  = -g -Wall -c
 
-build : 
+SRC_DIRS = ./src
+INC_DIRS = ./include
+
+SRCS := $(shell find $(SRC_DIRS) -name *.cpp)
+
+INCS := $(shell find $(INC_DIRS) -name *.hpp)
+INC_FLAGS := $(addprefix -I,$(INC_DIRS))
+
+.SILENT: all clean
+
+all: $(SRCS)
 	@echo \\033[33mCOMPILATION STARTED..\\033[0m""
-	
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && make" \;
-
+	$(CC) $(CFLAGS) $(INC_FLAGS) $(SRCS)
 	@echo \\033[32mCOMPILATION FINISHED\\033[0m""
 
-example :
-	@echo \\033[33mCOMPILATION OF EXAMPLES STARTED..\\033[0m""
+.PHONY: clean
 
-	cd Examples/ && make
-
-	@echo \\033[32mCOMPILATION FINISHED\\033[0m""
-
-clean: 
+clean:
 	@echo \\033[31mCLEANING STARTED..\\033[0m""
-
-	find . -maxdepth 1 -type d \( ! -name . \) -exec bash -c "cd '{}' && make clean” \;
-
+	-rm *.o
 	@echo \\033[31mCLEANING FINISHED\\033[0m""
