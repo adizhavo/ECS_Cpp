@@ -1,9 +1,11 @@
 #ifndef entity_hpp
 #define entity_hpp
 
+#define VECTOR_REMOVE(element, vector)                                          \
+vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
+
 #include <vector>
 #include "component.hpp"
-#include "ecsmacros.hpp"
 
 namespace ECS {
     class Entity {
@@ -21,19 +23,19 @@ namespace ECS {
         std::vector<Component*> GetComponents();
         
         template<typename T> void RemoveComponent() {
-            VECTOR_FOR_EACH (cmp_index, components){
-                T* comp = CAST_COMP(cmp_index, components, T);
+            for (Component* cmp : components){
+                T* comp = dynamic_cast<T*>(cmp);
                 if (comp != NULL) {
                     static_cast<Component*>(comp)->entity = 0;
                     VECTOR_REMOVE(comp, components);
-                    break;
+                    return;
                 }
             }
         }
         
         template<typename T> T* GetComponent() {
-            VECTOR_FOR_EACH (cmp_index, components){
-                T* comp = CAST_COMP(cmp_index, components, T);
+            for (Component* cmp : components) {
+                T* comp = dynamic_cast<T*>(cmp);
                 if (comp != NULL)
                     return comp;
             }
@@ -41,8 +43,8 @@ namespace ECS {
         }
         
         template<typename T> bool HasComponent() {
-            VECTOR_FOR_EACH (cmp_index, components){
-                T* comp = CAST_COMP(cmp_index, components, T);
+            for (Component* cmp : components){
+                T* comp = dynamic_cast<T*>(cmp);
                 if (comp != NULL)
                     return true;
             }
