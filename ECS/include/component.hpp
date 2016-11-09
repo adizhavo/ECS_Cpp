@@ -1,6 +1,8 @@
 #ifndef component_hpp
 #define component_hpp
 
+#include <typeinfo>
+
 #define CREATE_COMPONENT(c)       \
 using namespace ECS;              \
 class c : public Component {      \

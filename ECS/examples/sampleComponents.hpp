@@ -3,10 +3,10 @@
 
 #include "component.hpp"
 
-CREATE_COMPONENT(FirstComponent);
-ENDCOMP;
+CREATE_COMPONENT(FirstComponent)
+ENDCOMP
 
-CREATE_COMPONENT(SecondComponent);
-ENDCOMP;
+CREATE_COMPONENT(SecondComponent)
+ENDCOMP
 
 #endif
