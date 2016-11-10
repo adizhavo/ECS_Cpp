@@ -24,26 +24,24 @@ namespace ECS {
     }
     
     bool Entity::HasComponent(long component_id) {
-        VECTOR_FOR_EACH (cmp_index, components)
-        if (components.at(cmp_index)->unique_id() == component_id)
+        for (Component* cmp : components)
+        if (cmp->unique_id() == component_id)
             return true;
         return false;
     }
     
     void Entity::RemoveComponent(long component_id) {
-        VECTOR_FOR_EACH (cmp_index, components) {
-            Component* cmp = components.at(cmp_index);
-            if (cmp->unique_id() == component_id) {
-                cmp->entity = 0;
-                VECTOR_REMOVE(cmp, components);
-                break;
-            }
+        for (Component* cmp : components)
+        if (cmp->unique_id() == component_id) {
+            cmp->entity = 0;
+            VECTOR_REMOVE(cmp, components);
+            return;
         }
     }
     
     void Entity::RemoveAllComponents() {
-        VECTOR_FOR_EACH (cmp_index, components)
-        components.at(cmp_index)->entity = 0;
+        for (Component* cmp : components)
+        cmp->entity = 0;
         components.clear();
     }
     

@@ -33,7 +33,6 @@
 		899C6BF81DD34A6D009094C5 /* sampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleComponents.hpp; sourceTree = "<group>"; };
 		899C6BF91DD34A6D009094C5 /* SampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SampleReactiveSystem.hpp; sourceTree = "<group>"; };
 		899C6C031DD34A90009094C5 /* component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = component.hpp; sourceTree = "<group>"; };
-		899C6C041DD34A90009094C5 /* ecsmacros.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ecsmacros.hpp; sourceTree = "<group>"; };
 		899C6C051DD34A90009094C5 /* entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entity.hpp; sourceTree = "<group>"; };
 		899C6C061DD34A90009094C5 /* entityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entityMatcher.hpp; sourceTree = "<group>"; };
 		899C6C071DD34A90009094C5 /* filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filter.hpp; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				899C6C031DD34A90009094C5 /* component.hpp */,
-				899C6C041DD34A90009094C5 /* ecsmacros.hpp */,
 				899C6C051DD34A90009094C5 /* entity.hpp */,
 				899C6C061DD34A90009094C5 /* entityMatcher.hpp */,
 				899C6C071DD34A90009094C5 /* filter.hpp */,

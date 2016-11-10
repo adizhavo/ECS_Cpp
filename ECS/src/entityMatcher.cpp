@@ -1,6 +1,8 @@
 #include "entityMatcher.hpp"
 #include "filter.hpp"
-#include "ecsmacros.hpp"
+
+#define VECTOR_REMOVE(element, vector)                                          \
+vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
 
 namespace ECS {
     std::vector<Entity*>EntityMatcher::subscribedEntities;
@@ -10,16 +12,16 @@ namespace ECS {
     }
     
     void EntityMatcher::UnSubscribe(ECS::Entity* entity) {
-        VECTOR_FOR_EACH(index, subscribedEntities)
-        if (subscribedEntities.at(index) != NULL && subscribedEntities.at(index) == entity)
+        for (Entity* e : subscribedEntities )
+        if (e != NULL && e == entity)
             VECTOR_REMOVE(entity, subscribedEntities);
     }
     
     std::vector<Entity*> EntityMatcher::FilterGroup(Filter f){
         std::vector<Entity*> entities;
-        VECTOR_FOR_EACH(index, subscribedEntities)
-        if (subscribedEntities.at(index) != NULL && f.DoesMatch(subscribedEntities.at(index)))
-            entities.push_back(subscribedEntities.at(index));
+        for (Entity* e : subscribedEntities )
+        if (e != NULL && f.DoesMatch(e))
+            entities.push_back(e);
         return entities;
     }
 }

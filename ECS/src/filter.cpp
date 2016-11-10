@@ -2,7 +2,14 @@
 
 #include "filter.hpp"
 #include "entity.hpp"
-#include "ecsmacros.hpp"
+
+#define BUILD_FILTER(size, vector)                                              \
+va_list ids;                                                                    \
+va_start(ids, size);                                                            \
+for(int i = 0; i < size; i ++) {                                                \
+long unique_id = va_arg(ids, long);                                             \
+vector.push_back(unique_id);                                                    \
+}                                                                               \
 
 namespace ECS {
     Filter::~Filter() {
@@ -35,24 +42,24 @@ namespace ECS {
     }
     
     bool Filter::HasAnyMatcher(Entity* entity) {
-        VECTOR_FOR_EACH(i, anyOf)
-        if (entity->HasComponent(anyOf.at(i)))
+        for (long id : anyOf)
+        if (entity->HasComponent(id))
             return true;
         return this->anyOf.size() == 0;
     }
     
     bool Filter::HasAllMatchers(Entity* entity) {
         int componentCounter = 0;
-        VECTOR_FOR_EACH(i, allOf)
-        if (entity->HasComponent(allOf.at(i)))
+        for (long id : allOf)
+        if (entity->HasComponent(id))
             componentCounter ++;
         
         return this->allOf.size() == 0 || (componentCounter != 0 && componentCounter == allOf.size());
     }
     
     bool Filter::HasNoneMatcher(Entity* entity) {
-        VECTOR_FOR_EACH(i, noneOf)
-        if (entity->HasComponent(noneOf.at(i)))
+        for (long id : noneOf)
+        if (entity->HasComponent(id))
             return false;
         return true;
     }
