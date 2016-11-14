@@ -1,5 +1,5 @@
-#ifndef Test_hpp
-#define Test_hpp
+#ifndef test_hpp
+#define test_hpp
 
 #include <stdio.h>
 #include <iostream>
