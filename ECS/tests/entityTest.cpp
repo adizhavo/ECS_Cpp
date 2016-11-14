@@ -1,4 +1,4 @@
-#include "Test.hpp"
+#include "test.hpp"
 #include "entity.hpp"
 
 using namespace ECS;
