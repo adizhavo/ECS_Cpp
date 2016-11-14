@@ -23,6 +23,13 @@ namespace ECS {
         return *this;
     }
     
+    Component* Entity::GetComponent(long component_id) {
+        for (Component* cmp : components)
+            if (cmp->unique_id() == component_id)
+                return cmp;
+        return NULL;
+    }
+    
     bool Entity::HasComponent(long component_id) {
         for (Component* cmp : components)
         if (cmp->unique_id() == component_id)
