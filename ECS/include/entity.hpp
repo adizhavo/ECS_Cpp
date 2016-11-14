@@ -17,6 +17,7 @@ namespace ECS {
         ~Entity();
         
         Entity AddComponent(Component* component, bool notifySystems = true);
+        Component* GetComponent(long id);
         bool HasComponent(long component_id);
         void RemoveComponent(long component_id);
         void RemoveAllComponents();
