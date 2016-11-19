@@ -13,6 +13,8 @@
 		899C6C121DD34A97009094C5 /* filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0D1DD34A97009094C5 /* filter.cpp */; };
 		899C6C131DD34A97009094C5 /* reactiveSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0E1DD34A97009094C5 /* reactiveSystem.cpp */; };
 		899C6C141DD34A97009094C5 /* systemObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0F1DD34A97009094C5 /* systemObserver.cpp */; };
+		89AEA8201DE0A80F00E600A0 /* mainTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */; };
+		89AEA8241DE0B46C00E600A0 /* filterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA8231DE0B46C00E600A0 /* filterTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +46,8 @@
 		899C6C0D1DD34A97009094C5 /* filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filter.cpp; sourceTree = "<group>"; };
 		899C6C0E1DD34A97009094C5 /* reactiveSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = reactiveSystem.cpp; sourceTree = "<group>"; };
 		899C6C0F1DD34A97009094C5 /* systemObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = systemObserver.cpp; sourceTree = "<group>"; };
+		89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mainTest.cpp; path = tests/mainTest.cpp; sourceTree = "<group>"; };
+		89AEA8231DE0B46C00E600A0 /* filterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filterTest.cpp; path = tests/filterTest.cpp; sourceTree = "<group>"; };
 		89E45AD21DC7B6BD0042532D /* ECS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECS; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +67,8 @@
 			children = (
 				891D23721DD9E8B900437054 /* Test.hpp */,
 				891D23741DDA046500437054 /* entityTest.cpp */,
+				89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */,
+				89AEA8231DE0B46C00E600A0 /* filterTest.cpp */,
 			);
 			name = tests;
 			sourceTree = "<group>";
@@ -120,10 +126,10 @@
 		89E45AD41DC7B6BD0042532D /* ECS */ = {
 			isa = PBXGroup;
 			children = (
-				891D23701DD9E87900437054 /* tests */,
-				899C6C0A1DD34A97009094C5 /* src */,
-				899C6C021DD34A90009094C5 /* include */,
 				899C6BF71DD34A6D009094C5 /* examples */,
+				899C6C021DD34A90009094C5 /* include */,
+				899C6C0A1DD34A97009094C5 /* src */,
+				891D23701DD9E87900437054 /* tests */,
 			);
 			path = ECS;
 			sourceTree = "<group>";
@@ -188,6 +194,8 @@
 				899C6C131DD34A97009094C5 /* reactiveSystem.cpp in Sources */,
 				899C6C101DD34A97009094C5 /* entity.cpp in Sources */,
 				899C6C121DD34A97009094C5 /* filter.cpp in Sources */,
+				89AEA8201DE0A80F00E600A0 /* mainTest.cpp in Sources */,
+				89AEA8241DE0B46C00E600A0 /* filterTest.cpp in Sources */,
 				899C6C111DD34A97009094C5 /* entityMatcher.cpp in Sources */,
 				899C6C141DD34A97009094C5 /* systemObserver.cpp in Sources */,
 			);

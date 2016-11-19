@@ -4,20 +4,28 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "Component.hpp"
+
+CREATE_COMPONENT(FirstTestComponent)
+ENDCOMP
+
+CREATE_COMPONENT(SecondTestComponent)
+ENDCOMP
+
 #define START_TEST(T)                           \
-int main (int argc, char* argv[]) {             \
+class T {                                       \
+public :                                        \
+static int runTest () {                         \
 std::cout << "[P F] Pass, Fail"<<"\n";          \
 std::string graph;                              \
 std::string text;                               \
-std::cout << "Test title: " << T << "\n";       \
 
 #define ASSERT_TRUE(b, n)                       \
 graph = b ? "[x -] " : "[- x] ";                \
-text = b ? "passed\n" : "failed\n";             \
-std::cout << graph << n << ": " << text;        \
+std::cout << graph << n << "\n";              \
 
-#define END_TEST                                \
+#define END_TEST(r)                             \
 std::cout << "\n\n";                            \
-return 0; }                                     \
+return r; }};                                   \
 
 #endif
