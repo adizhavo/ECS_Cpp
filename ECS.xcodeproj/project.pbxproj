@@ -15,6 +15,7 @@
 		899C6C141DD34A97009094C5 /* systemObserver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0F1DD34A97009094C5 /* systemObserver.cpp */; };
 		89AEA8201DE0A80F00E600A0 /* mainTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */; };
 		89AEA8241DE0B46C00E600A0 /* filterTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA8231DE0B46C00E600A0 /* filterTest.cpp */; };
+		89AEA8281DE0BFE600E600A0 /* entityMatcherTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89AEA8271DE0BFE600E600A0 /* entityMatcherTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +49,7 @@
 		899C6C0F1DD34A97009094C5 /* systemObserver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = systemObserver.cpp; sourceTree = "<group>"; };
 		89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = mainTest.cpp; path = tests/mainTest.cpp; sourceTree = "<group>"; };
 		89AEA8231DE0B46C00E600A0 /* filterTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = filterTest.cpp; path = tests/filterTest.cpp; sourceTree = "<group>"; };
+		89AEA8271DE0BFE600E600A0 /* entityMatcherTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entityMatcherTest.cpp; path = tests/entityMatcherTest.cpp; sourceTree = "<group>"; };
 		89E45AD21DC7B6BD0042532D /* ECS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ECS; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				891D23741DDA046500437054 /* entityTest.cpp */,
 				89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */,
 				89AEA8231DE0B46C00E600A0 /* filterTest.cpp */,
+				89AEA8271DE0BFE600E600A0 /* entityMatcherTest.cpp */,
 			);
 			name = tests;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				891D23751DDA046500437054 /* entityTest.cpp in Sources */,
+				89AEA8281DE0BFE600E600A0 /* entityMatcherTest.cpp in Sources */,
 				899C6C131DD34A97009094C5 /* reactiveSystem.cpp in Sources */,
 				899C6C101DD34A97009094C5 /* entity.cpp in Sources */,
 				899C6C121DD34A97009094C5 /* filter.cpp in Sources */,
