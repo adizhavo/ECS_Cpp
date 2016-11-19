@@ -22,8 +22,7 @@ std::string text;                               \
 
 #define ASSERT_TRUE(b, n)                       \
 graph = b ? "[x -] " : "[- x] ";                \
-text = b ? "passed\n" : "failed\n";             \
-std::cout << graph << n << ": " << text;        \
+std::cout << graph << n << "\n";              \
 
 #define END_TEST(r)                             \
 std::cout << "\n\n";                            \
