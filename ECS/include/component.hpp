@@ -15,7 +15,7 @@ return COMP_ID(c);                \
 using namespace ECS;              \
 class c : public Component {      \
     public :                      \
-    RETURN_ID(c)
+    RETURN_ID(c)                  \
 
 #define ENDCOMP };
 
