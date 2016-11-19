@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "entityTest.cpp"
+#include "filterTest.cpp"
 
 int main () {
-    return UnitTest::EntityTest::runTest();
+    return UnitTest::FilterTest::runTest();
 }
