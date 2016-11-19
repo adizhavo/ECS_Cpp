@@ -4,12 +4,6 @@
 using namespace ECS;
 
 namespace UnitTest {
-CREATE_COMPONENT(FirstTestComponent)
-ENDCOMP
-
-CREATE_COMPONENT(SecondTestComponent)
-ENDCOMP
-
 #define TEARDOWN testEntity.RemoveAllComponents();
 
 START_TEST(EntityTest)

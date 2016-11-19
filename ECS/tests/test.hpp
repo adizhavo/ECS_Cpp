@@ -4,6 +4,14 @@
 #include <stdio.h>
 #include <iostream>
 
+#include "Component.hpp"
+
+CREATE_COMPONENT(FirstTestComponent)
+ENDCOMP
+
+CREATE_COMPONENT(SecondTestComponent)
+ENDCOMP
+
 #define START_TEST(T)                           \
 class T {                                       \
 public :                                        \
