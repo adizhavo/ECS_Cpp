@@ -3,6 +3,7 @@
 
 using namespace ECS;
 
+namespace UnitTest {
 CREATE_COMPONENT(FirstTestComponent)
 ENDCOMP
 
@@ -80,3 +81,4 @@ ASSERT_TRUE(comp == NULL, "Should return null if the component is not available 
 TEARDOWN
 
 END_TEST(0);
+}

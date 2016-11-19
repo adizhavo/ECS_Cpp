@@ -123,10 +123,10 @@
 		89E45AD41DC7B6BD0042532D /* ECS */ = {
 			isa = PBXGroup;
 			children = (
-				891D23701DD9E87900437054 /* tests */,
-				899C6C0A1DD34A97009094C5 /* src */,
-				899C6C021DD34A90009094C5 /* include */,
 				899C6BF71DD34A6D009094C5 /* examples */,
+				899C6C021DD34A90009094C5 /* include */,
+				899C6C0A1DD34A97009094C5 /* src */,
+				891D23701DD9E87900437054 /* tests */,
 			);
 			path = ECS;
 			sourceTree = "<group>";

@@ -2,5 +2,5 @@
 #include "entityTest.cpp"
 
 int main () {
-    return EntityTest::runTest();
+    return UnitTest::EntityTest::runTest();
 }
