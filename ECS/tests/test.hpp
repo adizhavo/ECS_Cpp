@@ -22,7 +22,7 @@ std::string text;                               \
 
 #define ASSERT_TRUE(b, n)                       \
 graph = b ? "[x -] " : "[- x] ";                \
-std::cout << graph << n << "\n";              \
+std::cout << graph << n << "\n";                \
 
 #define END_TEST(r)                             \
 std::cout << "\n\n";                            \
