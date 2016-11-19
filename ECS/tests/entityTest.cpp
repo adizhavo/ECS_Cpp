@@ -11,7 +11,7 @@ ENDCOMP
 
 #define TEARDOWN testEntity.RemoveAllComponents();
 
-START_TEST("Entity")
+START_TEST(EntityTest)
 Entity testEntity;
 FirstTestComponent first;
 SecondTestComponent second;
@@ -79,4 +79,4 @@ comp = testEntity.GetComponent(COMP_ID(FirstTestComponent));
 ASSERT_TRUE(comp == NULL, "Should return null if the component is not available by id");
 TEARDOWN
 
-END_TEST
+END_TEST(0);
