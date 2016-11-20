@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "test.hpp"
+#include "testMacro.hpp"
 #include "entity.hpp"
 #include "filter.hpp"
 #include "entityMatcher.hpp"
