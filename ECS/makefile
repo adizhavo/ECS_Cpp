@@ -18,7 +18,7 @@ OBJS := $(notdir $(SRCS:.cpp=.o))
 
 INC_FLAGS := $(addprefix -I,$(INC_DIRS))
 
-.SILENT: all example clean
+.SILENT: all example clean test
 
 all: $(SRCS)
 	@echo \\033[33mStarting compilation of files in $(SRC_DIRS)\\033""
