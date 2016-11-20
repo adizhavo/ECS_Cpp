@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		891D23751DDA046500437054 /* entityTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 891D23741DDA046500437054 /* entityTest.cpp */; };
+		896DF9A11DE1D1250071E77D /* reactiveSystemTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 896DF9A01DE1D1250071E77D /* reactiveSystemTest.cpp */; };
 		899C6C101DD34A97009094C5 /* entity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0B1DD34A97009094C5 /* entity.cpp */; };
 		899C6C111DD34A97009094C5 /* entityMatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0C1DD34A97009094C5 /* entityMatcher.cpp */; };
 		899C6C121DD34A97009094C5 /* filter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899C6C0D1DD34A97009094C5 /* filter.cpp */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		891D23721DD9E8B900437054 /* testMacro.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = testMacro.hpp; path = tests/testMacro.hpp; sourceTree = "<group>"; };
 		891D23741DDA046500437054 /* entityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entityTest.cpp; path = tests/entityTest.cpp; sourceTree = "<group>"; };
+		896DF9A01DE1D1250071E77D /* reactiveSystemTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reactiveSystemTest.cpp; path = tests/reactiveSystemTest.cpp; sourceTree = "<group>"; };
 		899C6BF81DD34A6D009094C5 /* sampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleComponents.hpp; sourceTree = "<group>"; };
 		899C6BF91DD34A6D009094C5 /* sampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleReactiveSystem.hpp; sourceTree = "<group>"; };
 		899C6C031DD34A90009094C5 /* component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = component.hpp; sourceTree = "<group>"; };
@@ -67,11 +69,12 @@
 		891D23701DD9E87900437054 /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				891D23721DD9E8B900437054 /* Test.hpp */,
+				891D23721DD9E8B900437054 /* testMacro.hpp */,
 				891D23741DDA046500437054 /* entityTest.cpp */,
 				89AEA81F1DE0A80F00E600A0 /* mainTest.cpp */,
 				89AEA8231DE0B46C00E600A0 /* filterTest.cpp */,
 				89AEA8271DE0BFE600E600A0 /* entityMatcherTest.cpp */,
+				896DF9A01DE1D1250071E77D /* reactiveSystemTest.cpp */,
 			);
 			name = tests;
 			sourceTree = "<group>";
@@ -80,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				899C6BF81DD34A6D009094C5 /* sampleComponents.hpp */,
-				899C6BF91DD34A6D009094C5 /* SampleReactiveSystem.hpp */,
+				899C6BF91DD34A6D009094C5 /* sampleReactiveSystem.hpp */,
 			);
 			path = examples;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				891D23751DDA046500437054 /* entityTest.cpp in Sources */,
+				896DF9A11DE1D1250071E77D /* reactiveSystemTest.cpp in Sources */,
 				89AEA8281DE0BFE600E600A0 /* entityMatcherTest.cpp in Sources */,
 				899C6C131DD34A97009094C5 /* reactiveSystem.cpp in Sources */,
 				899C6C101DD34A97009094C5 /* entity.cpp in Sources */,
