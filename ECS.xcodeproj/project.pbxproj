@@ -32,10 +32,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		891D23721DD9E8B900437054 /* Test.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Test.hpp; path = tests/Test.hpp; sourceTree = "<group>"; };
+		891D23721DD9E8B900437054 /* testMacro.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = testMacro.hpp; path = tests/testMacro.hpp; sourceTree = "<group>"; };
 		891D23741DDA046500437054 /* entityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entityTest.cpp; path = tests/entityTest.cpp; sourceTree = "<group>"; };
 		899C6BF81DD34A6D009094C5 /* sampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleComponents.hpp; sourceTree = "<group>"; };
-		899C6BF91DD34A6D009094C5 /* SampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SampleReactiveSystem.hpp; sourceTree = "<group>"; };
+		899C6BF91DD34A6D009094C5 /* sampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleReactiveSystem.hpp; sourceTree = "<group>"; };
 		899C6C031DD34A90009094C5 /* component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = component.hpp; sourceTree = "<group>"; };
 		899C6C051DD34A90009094C5 /* entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entity.hpp; sourceTree = "<group>"; };
 		899C6C061DD34A90009094C5 /* entityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entityMatcher.hpp; sourceTree = "<group>"; };
