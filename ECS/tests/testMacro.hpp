@@ -1,10 +1,11 @@
-#ifndef test_hpp
-#define test_hpp
+#ifndef testMacro_hpp
+#define testMacro_hpp
 
 #include <stdio.h>
 #include <iostream>
 
-#include "Component.hpp"
+#include "component.hpp"
+#include "reactiveSystem.hpp"
 
 CREATE_COMPONENT(FirstTestComponent)
 ENDCOMP
@@ -12,10 +13,34 @@ ENDCOMP
 CREATE_COMPONENT(SecondTestComponent)
 ENDCOMP
 
-#define START_TEST(T)                           \
-class T {                                       \
+class TestReactiveSystem : public ReactiveSystem {
+    public :
+    TestReactiveSystem(Filter* f) {
+        filter = f;
+    }
+    
+    void Execute(Entity* entity) {
+        isExecute = true;
+    }
+    
+    Filter GetFilter () {
+        return *filter;
+    }
+    
+    bool isExecute = false;
+    void Reset() {
+        isExecute = false;
+    }
+    
+    private :
+    Filter* filter;
+};
+
+#define START_TEST(C, T)                        \
+class C {                                       \
 public :                                        \
 static int runTest () {                         \
+std::cout << T << "\n";                         \
 std::cout << "[P F] Pass, Fail"<<"\n";          \
 std::string graph;                              \
 std::string text;                               \
