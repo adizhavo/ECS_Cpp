@@ -7,7 +7,7 @@ filter.Reset();                         \
 testSystem.Reset();                     \
 testEntity.RemoveAllComponents();       \
 
-    START_TEST(ReactiveSystemTest)
+    START_TEST(ReactiveSystemTest, "ReactiveSystem")
     Entity testEntity;
     FirstTestComponent first;
     SecondTestComponent second;

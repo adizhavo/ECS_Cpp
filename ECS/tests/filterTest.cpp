@@ -8,7 +8,7 @@ filter.Reset();                         \
 
 
 namespace UnitTest {
-START_TEST(FilterTest)
+START_TEST(FilterTest, "Filter")
     Entity testEntity;
     FirstTestComponent first;
     SecondTestComponent second;

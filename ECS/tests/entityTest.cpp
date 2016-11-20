@@ -6,7 +6,7 @@ using namespace ECS;
 namespace UnitTest {
 #define TEARDOWN testEntity.RemoveAllComponents();
 
-START_TEST(EntityTest)
+START_TEST(EntityTest, "Entity")
 Entity testEntity;
 FirstTestComponent first;
 SecondTestComponent second;

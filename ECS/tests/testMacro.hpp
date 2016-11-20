@@ -36,10 +36,11 @@ class TestReactiveSystem : public ReactiveSystem {
     Filter* filter;
 };
 
-#define START_TEST(T)                           \
-class T {                                       \
+#define START_TEST(C, T)                        \
+class C {                                       \
 public :                                        \
 static int runTest () {                         \
+std::cout << T << "\n";                         \
 std::cout << "[P F] Pass, Fail"<<"\n";          \
 std::string graph;                              \
 std::string text;                               \

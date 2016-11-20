@@ -11,7 +11,7 @@ namespace UnitTest {
 testEntity.RemoveAllComponents();       \
 filter.Reset();                         \
 
-    START_TEST(EntityMatcherTest)
+    START_TEST(EntityMatcherTest, "EntityMatcher")
     Entity testEntity;
     FirstTestComponent first;
     SecondTestComponent second;
