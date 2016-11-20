@@ -1,4 +1,4 @@
-CC = gcc
+CC = g++
 CFLAGS = -g -Wall -c -std=c++11
 SLIB = ar rcs
 
@@ -7,6 +7,7 @@ INC_DIRS = ./include
 EXP_DIRS = ./examples
 OBJ_DIRS = ./obj
 LIB_DIRS = ./lib
+TST_DIRS = ./tests
 
 SLIB_NAME = libecs.a
 
@@ -23,7 +24,7 @@ all: $(SRCS)
 	@echo \\033[33mStarting compilation of files in $(SRC_DIRS)\\033""
 	$(CC) $(CFLAGS) $(INC_FLAGS) $(SRCS)
 	@echo \\033[32mCompilation finished\\033""
-	@echo \\033[33mStarting build of static library\\033""
+	@echo \\033[33mStart building the static library\\033""
 	$(SLIB) $(SLIB_NAME) $(OBJS)
 	@mkdir -p $(LIB_DIRS)
 	@mv $(SLIB_NAME) $(LIB_DIRS)
@@ -35,6 +36,9 @@ example: $(EXPS)
 	@echo \\033[33mStarting compilation in $(EXP_DIRS)\\033""
 	$(CC) $(CFLAGS) $(INC_FLAGS) $(EXPS)
 	@echo \\033[32mCompilation finished\\033""
+
+test :
+	@$(TST_DIRS)/test entity filter entityMatcher systems
 
 .PHONY: clean
 
