@@ -12,10 +12,12 @@ void execute(std::string test)
     else if (test.compare("filter") == 0) FilterTest::runTest();
     else if (test.compare("entityMatcher") == 0) EntityMatcherTest::runTest();
     else if (test.compare("systems") == 0) ReactiveSystemTest::runTest();
+    
+    else std::cout << test << " - not an argument";
 }
 
 int main (int argc, char *argv[]) {
-    for (int i = 0; i < argc; i ++)
+    for (int i = 1; i < argc; i ++)
         execute(argv[i]);
     return 0;
 }
