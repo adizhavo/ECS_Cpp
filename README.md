@@ -11,7 +11,7 @@ It uses generics to achieve composition without having the need to write new cod
 The class diagram below will make easier to understand how the system works. 
 > missing diagram
 
-As said before, an entity is simply composed by small chunks of data or behaviours. 
+An entity is composed by small chunks of data or behaviours. 
 Systems are listeners and they are ready to reach any modified entity which matches the defined filter of components.
 
 # How to build
@@ -26,7 +26,7 @@ To run the tests, in the same directory run the command :
 
 ### Component
 
-To implement a component include ```component.hpp```, there are two way to setup a component, one is by using the macro:
+To implement a component include ```component.hpp```, there are two way to setup it up, one is by using the macro:
 ```C++
 #include "component.hpp"
 
@@ -35,9 +35,9 @@ CREATE_COMPONENT(FooComponent)
 ENDCOMP
 ```
 
-```FooComponent``` is the class definition, this way of defining a component works only if it doesn't inherit from multiple classes.
+```FooComponent``` is the class definition, this way works only if it doesn't need to inherit from multiple classes.
 
-The second way allows multiple inheritance this way :
+The second way allows multiple inheritance :
 
 ```C++
 #include "component.hpp"
@@ -48,13 +48,13 @@ class FooComponent : public ECS::Component /*other dependecies*/ {
     // put variables / methods here
 };
 ```
-In the second way is a must to use the ```RETURN_ID``` macro since provides the implementation for generating unique id for each component. This the id type is ```long```.
+In the second way is a must to use the ```RETURN_ID``` macro since provides the implementation for the component unique id.  The id is a ```long```.
 Is possible to get or compute any component id by using the macro ```COMP_ID``` in ```component.hpp```
 
 [Sample components](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/examples/sampleComponents.hpp)
 
 ### Entity
-An entity simply contains a vector of components. Is possible to add, remove components by type or id and doing additional checks this way:
+An entity simply contains a vector of components. Is possible to add, remove them by type or id and doing additional checks this way:
 
 ```C++
 entity.AddComponent(&foo);
