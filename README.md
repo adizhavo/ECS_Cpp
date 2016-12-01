@@ -14,6 +14,14 @@ The class diagram below will make easier to understand how the system works.
 As said before, an entity is simply composed by small chunks of data or behaviours. 
 Systems are listeners and they are ready to reach any modified entity which matches the defined filter of components.
 
+# How to build
+
+To build the static library, in the ```ECS``` directory run :
+>make
+
+To run the tests, in the same directory tun the command :
+>make test
+
 # How it works
 
 ### Component
@@ -22,29 +30,49 @@ To implement a component include ```component.hpp```, there are two way to setup
 ```C++
 #include "component.hpp"
 
-CREATE_COMPONENT(SampleComponent)
+CREATE_COMPONENT(FooComponent)
 // put variables / methods here
 ENDCOMP
 ```
 
-```SampleComponent``` is the class definition, this way of defining a component works only if it doesn't inherit from multiple classes.
+```FooComponent``` is the class definition, this way of defining a component works only if it doesn't inherit from multiple classes.
 
 The second way allows multiple inheritance this way :
 
 ```C++
 #include "component.hpp"
 
-class SampleComponent : public ECS::Component /*other dependecies*/ {
+class FooComponent : public ECS::Component /*other dependecies*/ {
     // put variables / methods here
     RETURN_ID(SampleComponent)
     // put variables / methods here
 };
 ```
+In the second way is a must to use the ```RETURN_ID``` macro since provides the implementation for generating unique id for each component. This the id type is ```long```.
+Is possible to get or compute any component id by using the macro ```COMP_ID``` in ```component.hpp```
 
 [Sample components](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/examples/sampleComponents.hpp)
 
 ### Entity
-> n/a
+An entity simply contains a vector of components. Is possible to add, remove components by type or id and doing additional checks this way:
+
+```C++
+entity.AddComponent(&foo);
+
+// doesn't notify the systems
+entity.AddComponent(&foo, false)
+
+bool hasComp = entity.HasComponent<FooComponent>();
+bool hasComp = entity.HasComponent(COMP_ID(FooComponent));
+
+entity.RemoveComponent<FooComponent>();
+entity.RemoveComponent(COMP_ID(FooComponent));
+
+Component* fooComp = entity.GetComponent<FooComponent>();
+Component* fooComp = entity.GetComponent(COMP_ID(FooComponent));
+```
+
+The entity subscribes and unsubscribes from the entity matcher when created or destroyed.
 
 ### Entity matcher
 > n/a
