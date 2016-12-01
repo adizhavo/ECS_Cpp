@@ -19,7 +19,7 @@ Systems are listeners and they are ready to reach any modified entity which matc
 To build the static library, in the ```ECS``` directory run :
 >make
 
-To run the tests, in the same directory tun the command :
+To run the tests, in the same directory run the command :
 >make test
 
 # How it works
