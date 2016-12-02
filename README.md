@@ -75,7 +75,14 @@ Component* fooComp = entity.GetComponent(COMP_ID(FooComponent));
 The entity subscribes and unsubscribes from the entity matcher when created or destroyed.
 
 ### Entity matcher
-> n/a
+
+The entity matcher contains all the subscribed entities. As said above, an entity interacts with the matcher when created or destroyed but is also possible (not recommended) to manually unsubscribe an entity.
+
+The main role of the matcher is to provide a way to gather entities and group them based on a filter.
+
+```C++
+std::vector<Entity*> rocks = EntityMatcher::FilterGroup(rockFilter);
+```
 
 ### Filters
 > n/a
