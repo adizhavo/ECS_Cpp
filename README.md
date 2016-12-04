@@ -91,7 +91,7 @@ Filters area used to check if a specfic entity matches the requirements. As in t
 There are three methods to build up a filter with different components id, used later to match an entity:
 ```C++
 #include "filter.hpp"
-#include "component.hpp" // we have to use the COMP_ID macro to generate its id
+#include "component.hpp" // we have to use the COMP_ID macro to extract the id
 
 filter.AllOf(2, COMP_ID(FooComponent1), COMP_ID(FooComponent2))
       .AnyOf(1, COMP_ID(FooComponent3))
