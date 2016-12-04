@@ -16,11 +16,8 @@ Systems are listeners and they are ready to reach any modified entity which matc
 
 # How to build
 
-To build the static library, in the ```ECS``` directory run :
->make
-
-To run the tests, in the same directory run the command :
->make test
+To build the static library, in the ```./ECS``` directory run the ```make``` command.
+To run the tests, in the same directory run the ```make test``` command.
 
 # How it works
 
@@ -57,6 +54,8 @@ Is possible to get or compute any component id by using the macro ```COMP_ID``` 
 An entity simply contains a vector of components. Is possible to add, remove them by type or id and doing additional checks this way:
 
 ```C++
+#include "entity.hpp"
+
 entity.AddComponent(&foo);
 
 // doesn't notify the systems
@@ -81,11 +80,26 @@ The entity matcher contains all the subscribed entities. As said above, an entit
 The main role of the matcher is to provide a way to gather entities and group them based on a filter.
 
 ```C++
+#include "entityMatcher.hpp"
+
 std::vector<Entity*> rocks = EntityMatcher::FilterGroup(rockFilter);
 ```
 
 ### Filters
-> n/a
+Filters area used to check if a specfic entity matches the requirements. As in the example above, is possible to get a specific group of entities from the matcher based on the filter which is passed as an argument.
+
+There are three methods to build up a filter with different components id, used later to match an entity:
+```C++
+#include "filter.hpp"
+#include "component.hpp" // we have to use the COMP_ID macro to generate its id
+
+filter.AllOf(2, COMP_ID(FooComponent1), COMP_ID(FooComponent2))
+      .AnyOf(1, COMP_ID(FooComponent3))
+      .NoneOf(1, COMP_ID(FooComponent4));
+      
+bool match = filter.DoesMatch(&entity);
+filter.Reset();
+```
 
 ### Systems
 > n/a
