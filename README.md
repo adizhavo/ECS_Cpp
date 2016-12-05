@@ -102,12 +102,14 @@ filter.Reset();
 ```
 
 ### Reactive systems
-Reactive system are objects which are notified if a component is added to an entity that matcher the system's filter. To create a reactive system, the class should inherit from ```ECS::ReactiveSystem``` like in [this example](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/examples/sampleReactiveSystem.hpp) and subscribe it to the [system observer](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/include/systemObserver.hpp).
+Reactive system are objects which are notified if a component is added to an entity that matcher the system's filter. To create a reactive system, the class should inherit from ```ECS::ReactiveSystem``` like in [this example](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/examples/sampleReactiveSystem.hpp), the default implementation of the reactive system subscribes and unsubscribes to [system observer](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/include/systemObserver.hpp) when created or destroyed, but this implementation can be ignored at will.
 
 Have a look at the [test cases](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/tests/reactiveSystemTest.cpp) for the reactive system. 
 
-# Conclusion
-> n/a
-
 # What to improve
-> n/a
+1. Add ```ReplaceComponent``` method in the entity.
+2. Notify reactive system when a component is updated, replaced or removed.
+
+To better understand the system, check also the [test cases](https://github.com/adizhavo/ECS_Cpp/tree/master/ECS/tests).
+
+
