@@ -101,8 +101,10 @@ bool match = filter.DoesMatch(&entity);
 filter.Reset();
 ```
 
-### Systems
-> n/a
+### Reactive systems
+Reactive system are objects which are notified if a component is added to an entity that matcher the system's filter. To create a reactive system, the class should inherit from ```ECS::ReactiveSystem``` like in [this example](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/examples/sampleReactiveSystem.hpp) and subscribe it to the [system observer](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/include/systemObserver.hpp).
+
+Have a look at the [test cases](https://github.com/adizhavo/ECS_Cpp/blob/master/ECS/tests/reactiveSystemTest.cpp) for the reactive system. 
 
 # Conclusion
 > n/a
