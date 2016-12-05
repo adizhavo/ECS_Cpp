@@ -110,6 +110,6 @@ Have a look at the [test cases](https://github.com/adizhavo/ECS_Cpp/blob/master/
 1. Add ```ReplaceComponent``` method in the entity.
 2. Notify reactive system when a component is updated, replaced or removed.
 
-To better understand the system, check also the [test cases](https://github.com/adizhavo/ECS_Cpp/tree/master/ECS/tests).
+To better understand the system, check also the [test cases](https://github.com/adizhavo/ECS_Cpp/tree/master/ECS/tests) of the project.
 
 
