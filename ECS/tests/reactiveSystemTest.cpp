@@ -20,9 +20,9 @@ testEntity.RemoveAllComponents();       \
     ASSERT_TRUE(testSystem.isExecute, "System should receive the event ang get the specified entity")
     TEARDOWN
     
-    testEntity.AddComponent(&first);
     filter.AnyOf(1, COMP_ID(SecondTestComponent));
-    ASSERT_TRUE(testSystem.isExecute, "System not should receive the event and get the specified entity")
+    testEntity.AddComponent(&first);
+    ASSERT_TRUE(!testSystem.isExecute, "System not should receive the event and get the specified entity")
     TEARDOWN
     
     
