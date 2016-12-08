@@ -8,9 +8,6 @@
 ECS is a simple [entity component system](https://en.wikipedia.org/wiki/Entity_component_system) framework.
 It uses generics to achieve composition without having the need to write new code inside the container class which is called entity.
 
-The class diagram below will make easier to understand how the system works. 
-> missing diagram
-
 An entity is composed by small chunks of data or behaviours. 
 Systems are listeners and they are ready to reach any modified entity which matches the defined filter of components.
 
