@@ -1,7 +1,7 @@
 # ECS
 
 |Languages|
----
+|---|
 |[C#](https://github.com/adizhavo/ECS)|
 |[C++](https://github.com/adizhavo/ECS_Cpp)|
 
