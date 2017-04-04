@@ -51,6 +51,16 @@ namespace ECS {
             }
             return false;
         }
+        
+        template<typename T> std::vector<T*> GetComponents() {
+            std::vector<T*> comps;
+            for (Component* cmp : components) {
+                T* comp = dynamic_cast<T*>(cmp);
+                if (comp != NULL)
+                    comps.push_back(comp);
+            }
+            return comps;
+        }
     };
 }
 
