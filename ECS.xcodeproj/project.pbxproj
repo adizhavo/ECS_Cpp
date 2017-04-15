@@ -36,14 +36,14 @@
 		891D23721DD9E8B900437054 /* testMacro.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = testMacro.hpp; path = tests/testMacro.hpp; sourceTree = "<group>"; };
 		891D23741DDA046500437054 /* entityTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = entityTest.cpp; path = tests/entityTest.cpp; sourceTree = "<group>"; };
 		896DF9A01DE1D1250071E77D /* reactiveSystemTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = reactiveSystemTest.cpp; path = tests/reactiveSystemTest.cpp; sourceTree = "<group>"; };
+		898BCA781EA24AAC004960C8 /* component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = component.hpp; path = ECS/headers/component.hpp; sourceTree = SOURCE_ROOT; };
+		898BCA791EA24AAC004960C8 /* entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = entity.hpp; path = ECS/headers/entity.hpp; sourceTree = SOURCE_ROOT; };
+		898BCA7A1EA24AAC004960C8 /* entityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = entityMatcher.hpp; path = ECS/headers/entityMatcher.hpp; sourceTree = SOURCE_ROOT; };
+		898BCA7B1EA24AAC004960C8 /* filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = filter.hpp; path = ECS/headers/filter.hpp; sourceTree = SOURCE_ROOT; };
+		898BCA7C1EA24AAC004960C8 /* reactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = reactiveSystem.hpp; path = ECS/headers/reactiveSystem.hpp; sourceTree = SOURCE_ROOT; };
+		898BCA7D1EA24AAC004960C8 /* systemObserver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = systemObserver.hpp; path = ECS/headers/systemObserver.hpp; sourceTree = SOURCE_ROOT; };
 		899C6BF81DD34A6D009094C5 /* sampleComponents.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleComponents.hpp; sourceTree = "<group>"; };
 		899C6BF91DD34A6D009094C5 /* sampleReactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = sampleReactiveSystem.hpp; sourceTree = "<group>"; };
-		899C6C031DD34A90009094C5 /* component.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = component.hpp; sourceTree = "<group>"; };
-		899C6C051DD34A90009094C5 /* entity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entity.hpp; sourceTree = "<group>"; };
-		899C6C061DD34A90009094C5 /* entityMatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = entityMatcher.hpp; sourceTree = "<group>"; };
-		899C6C071DD34A90009094C5 /* filter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = filter.hpp; sourceTree = "<group>"; };
-		899C6C081DD34A90009094C5 /* reactiveSystem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = reactiveSystem.hpp; sourceTree = "<group>"; };
-		899C6C091DD34A90009094C5 /* systemObserver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = systemObserver.hpp; sourceTree = "<group>"; };
 		899C6C0B1DD34A97009094C5 /* entity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entity.cpp; sourceTree = "<group>"; };
 		899C6C0C1DD34A97009094C5 /* entityMatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = entityMatcher.cpp; sourceTree = "<group>"; };
 		899C6C0D1DD34A97009094C5 /* filter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filter.cpp; sourceTree = "<group>"; };
@@ -91,12 +91,12 @@
 		899C6C021DD34A90009094C5 /* headers */ = {
 			isa = PBXGroup;
 			children = (
-				899C6C031DD34A90009094C5 /* component.hpp */,
-				899C6C051DD34A90009094C5 /* entity.hpp */,
-				899C6C061DD34A90009094C5 /* entityMatcher.hpp */,
-				899C6C071DD34A90009094C5 /* filter.hpp */,
-				899C6C081DD34A90009094C5 /* reactiveSystem.hpp */,
-				899C6C091DD34A90009094C5 /* systemObserver.hpp */,
+				898BCA781EA24AAC004960C8 /* component.hpp */,
+				898BCA791EA24AAC004960C8 /* entity.hpp */,
+				898BCA7A1EA24AAC004960C8 /* entityMatcher.hpp */,
+				898BCA7B1EA24AAC004960C8 /* filter.hpp */,
+				898BCA7C1EA24AAC004960C8 /* reactiveSystem.hpp */,
+				898BCA7D1EA24AAC004960C8 /* systemObserver.hpp */,
 			);
 			name = headers;
 			path = include;
