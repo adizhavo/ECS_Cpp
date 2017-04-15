@@ -19,6 +19,14 @@ class c : public Component {      \
 
 #define ENDCOMP };
 
+#define CREATE_ABSTRACT_COMPONENT(c) \
+using namespace ECS;                 \
+class c : public Component {         \
+    public :                         \
+    virtual long unique_id() = 0;    \
+
+#define ENDCOMP };
+
 namespace ECS {
     class Entity;
     

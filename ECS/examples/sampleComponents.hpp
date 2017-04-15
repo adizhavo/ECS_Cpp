@@ -8,6 +8,10 @@ CREATE_COMPONENT(FirstComponent)
 // put variables / methods here
 ENDCOMP
 
+CREATE_ABSTRACT_COMPONENT(AbstractComponent)
+// put variables / methods here
+ENDCOMP
+
 // component with multiple inheritance
 class SecondComponent : public ECS::Component /*other dependecies*/ {
     // put variables / methods here
