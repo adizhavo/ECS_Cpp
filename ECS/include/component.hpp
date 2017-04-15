@@ -29,6 +29,10 @@ namespace ECS {
         Component() {
             this->entity = 0;
         }
+        
+        virtual ~Component(){
+            this->entity = 0;
+        }
     };
 }
 
