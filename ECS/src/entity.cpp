@@ -12,7 +12,7 @@ namespace ECS {
         RemoveAllComponents();
     }
     
-    Entity Entity::AddComponent(Component* component, bool notifySystems) {
+    Entity* Entity::AddComponent(Component* component, bool notifySystems) {
         if (!HasComponent(component->unique_id())) {
             components.push_back(component);
             component->entity = this;
@@ -20,7 +20,7 @@ namespace ECS {
             if (notifySystems)
                 SystemObserver::Notify(this);
         }
-        return *this;
+        return this;
     }
     
     Component* Entity::GetComponent(long component_id) {
@@ -37,18 +37,26 @@ namespace ECS {
         return false;
     }
     
-    void Entity::RemoveComponent(long component_id) {
+    void Entity::RemoveComponent(long component_id, bool freeComponent) {
         for (Component* cmp : components)
         if (cmp->unique_id() == component_id) {
             cmp->entity = 0;
             VECTOR_REMOVE(cmp, components);
+            if (freeComponent)
+            {
+                delete cmp;
+                cmp = NULL;
+            }
             return;
         }
     }
     
     void Entity::RemoveAllComponents() {
         for (Component* cmp : components)
-        cmp->entity = 0;
+        {
+            delete cmp;
+            cmp = NULL;
+        }
         components.clear();
     }
     
