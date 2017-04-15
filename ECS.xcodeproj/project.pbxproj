@@ -88,7 +88,7 @@
 			path = examples;
 			sourceTree = "<group>";
 		};
-		899C6C021DD34A90009094C5 /* include */ = {
+		899C6C021DD34A90009094C5 /* headers */ = {
 			isa = PBXGroup;
 			children = (
 				899C6C031DD34A90009094C5 /* component.hpp */,
@@ -98,6 +98,7 @@
 				899C6C081DD34A90009094C5 /* reactiveSystem.hpp */,
 				899C6C091DD34A90009094C5 /* systemObserver.hpp */,
 			);
+			name = headers;
 			path = include;
 			sourceTree = "<group>";
 		};
@@ -133,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				899C6BF71DD34A6D009094C5 /* examples */,
-				899C6C021DD34A90009094C5 /* include */,
+				899C6C021DD34A90009094C5 /* headers */,
 				899C6C0A1DD34A97009094C5 /* src */,
 				891D23701DD9E87900437054 /* tests */,
 			);
