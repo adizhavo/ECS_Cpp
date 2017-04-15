@@ -3,7 +3,7 @@ CFLAGS = -g -Wall -c -std=c++11
 SLIB = ar rcs
 
 SRC_DIRS = ./src
-INC_DIRS = ./include
+INC_DIRS = ./headers
 EXP_DIRS = ./examples
 OBJ_DIRS = ./obj
 LIB_DIRS = ./lib
