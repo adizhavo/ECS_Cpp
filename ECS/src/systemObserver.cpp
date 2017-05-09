@@ -1,6 +1,7 @@
 #include "systemObserver.hpp"
 #include "reactiveSystem.hpp"
 #include "filter.hpp"
+#include <cstddef>
 
 #define VECTOR_REMOVE(element, vector)                                          \
 vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
