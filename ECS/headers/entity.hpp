@@ -1,11 +1,13 @@
 #ifndef entity_hpp
 #define entity_hpp
 
+#include <vector>
+#include "component.hpp"
+#include <cstddef>
+
 #define VECTOR_REMOVE(element, vector)                                          \
 vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
 
-#include <vector>
-#include "component.hpp"
 
 namespace ECS {
     class Entity {
