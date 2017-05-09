@@ -1,5 +1,6 @@
 #include "entityMatcher.hpp"
 #include "filter.hpp"
+#include <algorithm>
 
 #define VECTOR_REMOVE(element, vector)                                          \
 vector.erase(std::remove(vector.begin(), vector.end(), element), vector.end())  \
