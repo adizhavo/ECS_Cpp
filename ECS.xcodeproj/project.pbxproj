@@ -334,7 +334,7 @@
 				89E45AD81DC7B6BD0042532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		89E45AD91DC7B6BD0042532D /* Build configuration list for PBXNativeTarget "ECS" */ = {
 			isa = XCConfigurationList;
@@ -343,7 +343,7 @@
 				89E45ADB1DC7B6BD0042532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
