@@ -1,5 +1,6 @@
 #include "entityMatcher.hpp"
 #include "filter.hpp"
+#include <cstddef>
 #include <algorithm>
 
 #define VECTOR_REMOVE(element, vector)                                          \
@@ -18,11 +19,19 @@ namespace ECS {
             VECTOR_REMOVE(entity, subscribedEntities);
     }
     
-    std::vector<Entity*> EntityMatcher::FilterGroup(Filter f){
+    std::vector<Entity*> EntityMatcher::FilterGroup(Filter f) {
         std::vector<Entity*> entities;
         for (Entity* e : subscribedEntities )
         if (e != NULL && f.DoesMatch(e))
             entities.push_back(e);
         return entities;
+    }
+    
+    int EntityMatcher::SubscribeCount() {
+        int count = 0;
+        for (Entity* e : subscribedEntities )
+        if (e != NULL)
+            count ++;
+        return count;
     }
 }
