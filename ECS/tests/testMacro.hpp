@@ -47,6 +47,7 @@ std::string text;                               \
 
 #define ASSERT_TRUE(b, n)                       \
 graph = b ? "[x -] " : "[- x] ";                \
+if (b == false) return_error = 1;               \
 std::cout << graph << n << "\n";                \
 
 #define END_TEST(r)                             \

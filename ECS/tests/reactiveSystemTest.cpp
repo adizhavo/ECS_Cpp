@@ -6,25 +6,28 @@ namespace UnitTest {
 filter.Reset();                         \
 testSystem.Reset();                     \
 testEntity.RemoveAllComponents();       \
+first = new FirstTestComponent();       \
+second = new SecondTestComponent();     \
 
     START_TEST(ReactiveSystemTest, "ReactiveSystem")
+    int return_error = 0;
     Entity testEntity;
-    FirstTestComponent first;
-    SecondTestComponent second;
+    FirstTestComponent* first = new FirstTestComponent();
+    SecondTestComponent* second = new SecondTestComponent();
     Filter filter;
     TestReactiveSystem testSystem = TestReactiveSystem(&filter);
     
     
     filter.AnyOf(1, COMP_ID(FirstTestComponent));
-    testEntity.AddComponent(&first);
+    testEntity.AddComponent(first);
     ASSERT_TRUE(testSystem.isExecute, "System should receive the event ang get the specified entity")
     TEARDOWN
     
     filter.AnyOf(1, COMP_ID(SecondTestComponent));
-    testEntity.AddComponent(&first);
+    testEntity.AddComponent(first);
     ASSERT_TRUE(!testSystem.isExecute, "System not should receive the event and get the specified entity")
     TEARDOWN
     
     
-    END_TEST(0)
+    END_TEST(return_error)
 }

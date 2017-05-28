@@ -12,6 +12,7 @@ namespace ECS {
         static void Subscribe(Entity* entity);
         static void UnSubscribe(Entity* entity);
         static std::vector<Entity*> FilterGroup(Filter f);
+        static int SubscribeCount();
         
         private:
         static std::vector<Entity*> subscribedEntities;
