@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/adizhavo/ECS_Cpp.svg?branch=master)](https://travis-ci.org/adizhavo/ECS_Cpp)
 # ECS
 
 |Languages|
