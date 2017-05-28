@@ -25,5 +25,4 @@ addons:
 
 script:
   - cd ECS
-  - make test
   - make
