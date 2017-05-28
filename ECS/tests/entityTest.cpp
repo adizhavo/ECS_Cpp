@@ -10,6 +10,7 @@ first = new FirstTestComponent();  \
 second = new SecondTestComponent(); \
     
 START_TEST(EntityTest, "Entity")
+int return_error = 0;
 Entity testEntity;
 FirstTestComponent* first = new FirstTestComponent();
 SecondTestComponent* second = new SecondTestComponent();
@@ -77,5 +78,5 @@ comp = testEntity.GetComponent(COMP_ID(FirstTestComponent));
 ASSERT_TRUE(comp == NULL, "Should return null if the component is not available by id");
 TEARDOWN
 
-END_TEST(0);
+END_TEST(return_error);
 }

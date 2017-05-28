@@ -10,6 +10,7 @@ first = new FirstTestComponent();       \
 second = new SecondTestComponent();     \
 
     START_TEST(ReactiveSystemTest, "ReactiveSystem")
+    int return_error = 0;
     Entity testEntity;
     FirstTestComponent* first = new FirstTestComponent();
     SecondTestComponent* second = new SecondTestComponent();
@@ -28,5 +29,5 @@ second = new SecondTestComponent();     \
     TEARDOWN
     
     
-    END_TEST(0)
+    END_TEST(return_error)
 }

@@ -14,6 +14,7 @@ first = new FirstTestComponent();       \
 second = new SecondTestComponent();     \
 
     START_TEST(EntityMatcherTest, "EntityMatcher")
+    int return_error = 0;
     Entity testEntity;
     FirstTestComponent* first = new FirstTestComponent();
     SecondTestComponent* second = new SecondTestComponent();
@@ -30,5 +31,5 @@ second = new SecondTestComponent();     \
     ASSERT_TRUE(EntityMatcher::FilterGroup(filter).size() == 1, "Entity matcher should return the correct group")
     TEARDOWN
     
-    END_TEST(0)
+    END_TEST(return_error)
 }

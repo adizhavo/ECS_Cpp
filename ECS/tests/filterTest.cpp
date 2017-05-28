@@ -11,6 +11,7 @@ second = new SecondTestComponent();     \
 
 namespace UnitTest {
 START_TEST(FilterTest, "Filter")
+    int return_error = 0;
     Entity testEntity;
     FirstTestComponent* first = new FirstTestComponent();
     SecondTestComponent* second = new SecondTestComponent();
@@ -61,5 +62,5 @@ START_TEST(FilterTest, "Filter")
     
     TEARDOWN
     
-END_TEST(0)
+END_TEST(return_error)
 }
