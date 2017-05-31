@@ -23,21 +23,21 @@ namespace ECS {
         return this;
     }
     
-    Component* Entity::GetComponent(long component_id) {
+    Component* Entity::GetComponent(unsigned long component_id) {
         for (Component* cmp : components)
             if (cmp->unique_id() == component_id)
                 return cmp;
         return NULL;
     }
     
-    bool Entity::HasComponent(long component_id) {
+    bool Entity::HasComponent(unsigned long component_id) {
         for (Component* cmp : components)
         if (cmp->unique_id() == component_id)
             return true;
         return false;
     }
     
-    void Entity::RemoveComponent(long component_id, bool freeComponent) {
+    void Entity::RemoveComponent(unsigned long component_id, bool freeComponent) {
         for (Component* cmp : components)
         if (cmp->unique_id() == component_id) {
             cmp->entity = 0;
