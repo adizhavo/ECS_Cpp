@@ -7,7 +7,7 @@
 typeid(c).hash_code()             \
 
 #define RETURN_ID(c)              \
-long unique_id() {                \
+ unsigned long unique_id() {      \
 return COMP_ID(c);                \
 }                                 \
 
@@ -23,7 +23,7 @@ class c : public Component {      \
 using namespace ECS;                 \
 class c : public Component {         \
     public :                         \
-    virtual long unique_id() = 0;    \
+    virtual unsigned long unique_id() = 0; \
 
 #define ENDCOMP };
 
@@ -33,7 +33,7 @@ namespace ECS {
     class Component {
         public :
         Entity* entity;
-        virtual long unique_id() = 0;
+        virtual unsigned long unique_id() = 0;
         Component() {
             this->entity = 0;
         }
